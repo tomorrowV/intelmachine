@@ -1,7 +1,6 @@
 .open {
     &__container {
         display: flex;
-        align-items: flex-start;
     }
 
     &__left,
@@ -11,7 +10,9 @@
     }
 
     &__left {
+        height: auto;
         padding: 50px 34px;
+        border-bottom: 1px dashed var(--botticelli-color);
 
         h2 {
             max-width: 440px;

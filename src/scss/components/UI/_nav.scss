@@ -1,0 +1,18 @@
+.nav {
+    &__menu {
+        @include flex-v-center;
+        gap: 24px;
+
+        @media screen and (min-width: 1440px) {
+            gap: 60px;
+        }
+    }
+
+    &__link {
+        @include EUSemiBold;
+        font-size: 10px;
+        line-height: 22px;
+        text-transform: uppercase;
+        color: #222222;
+    }
+}
