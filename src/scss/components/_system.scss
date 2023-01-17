@@ -1,0 +1,136 @@
+.system {
+    &__head {
+        max-width: 750px;
+        margin-bottom: 50px;
+
+        h2 {
+            margin: 0 0 12px 0;
+        }
+    }
+
+    &__top {
+        display: flex;
+        background-color: #F3F4F5;
+
+    }
+
+    &__left {
+        flex-grow: 1;
+        padding: 47px 34px 34px;
+    }
+
+    &__content {
+        max-width: 768px;
+        width: 100%;
+        position: relative;
+    }
+
+    &__side {
+        // flex-basis: 317px;
+        flex-basis: 25%;
+        background-color: var(--blue-color);
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__cards {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__card {
+        flex-basis: 50%;
+
+        &:not(:last-child) {
+            border-right: 1px dashed var(--botticelli-color);
+        }
+
+    }
+}
+
+.system-card {
+    padding: 47px 34px 41px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    h3 {
+        @include EUSemiBold;
+        font-size: 18px;
+        line-height: 22px;
+        color: var(--blue-color);
+        margin: 0 0 12px 0;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 22px;
+        color: var(--pale-color);
+        margin: 0 0 68px 0;
+        max-width: 420px;
+    }
+
+    a {
+        min-width: 132px;
+        margin-top: auto;
+    }
+}
+
+.system__accordion {
+    position: absolute;
+    width: 100%;
+
+    &:nth-child(1) {
+        background-color: #2252BF;
+        top: 0%;
+    }
+
+    &:nth-child(2) {
+        background-color: #3363D1;
+        top: 20%;
+    }
+
+    &:nth-child(3) {
+        background-color: #2252BF;
+        top: 40%;
+    }
+
+    &:nth-child(4) {
+        background-color: #1646B3;
+        top: 60%;
+    }
+}
+
+.accordion {
+    height: 10%;
+
+    &.active {
+        height: 70%;
+    }
+
+    .panel {
+        overflow: hidden;
+        display: none;
+        padding: 60px 42px 30px 52px;
+        color: var(--light-color);
+        min-height: 0;
+    }
+
+    .tooltip {
+        margin-bottom: 33px;
+    }
+
+    h3 {
+        margin: 0 0 20px -35px;
+        @include EUSemiBold;
+        font-size: 55px;
+        line-height: 50px;
+    }
+
+    p {
+        margin: 0;
+        font-size: 15px;
+        line-height: 24px;
+        color: var(--light-color);
+    }
+}

@@ -1,0 +1,14 @@
+// @include font-face("Muller", "../fonts/MullerRegular", 400, normal);
+@include font-face("EuropeDemiC", "../fonts/EuropeDemiC", 600, normal);
+// @include font-face("Europe-normal", "../fonts/Europe-normal", 400, normal);
+@include font-face("EuropeRegular", "../fonts/EuropeRegular", 400, normal);
+
+@mixin EUSemiBold {
+    font-family: "EuropeDemiC", sans-serif;
+    font-weight: 600;
+}
+
+@mixin EURegular {
+    font-family: "EuropeRegular", sans-serif;
+    font-weight: 400;
+}

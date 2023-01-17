@@ -1,0 +1,113 @@
+.footer {
+    background-color: #1E323C;
+    color: #A8B9BF;
+
+    &__container {
+        max-width: calc(100% - 68px);
+        padding: 65px 0 47px;
+        margin-bottom: 36px;
+        border-bottom: 1px dashed #777d83;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 20px;
+
+    }
+
+    &__rights {
+        padding-bottom: 36px;
+        @include flex-all-sb;
+        gap: 20px;
+        font-size: 11px;
+        line-height: 17px;
+
+        .private {
+            max-width: 120px;
+        }
+
+        .policy {
+            max-width: 120px;
+        }
+
+        .business {
+            max-width: 200px;
+
+            &>div {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 2px;
+            }
+        }
+
+        .links {
+            @include flex-v-center;
+            gap: 20px;
+        }
+    }
+
+    &__logo {
+        transform: translateY(-25px);
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__nav-link {
+        font-size: 13px;
+        line-height: 18px;
+    }
+}
+
+.footer-contacts {
+    // flex-basis: 303px;
+    flex-basis: 25%;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        text-align: right;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 0.5px dashed #777D83;
+        }
+    }
+
+    .phone a {
+        @include EUSemiBold;
+        font-size: 17px;
+        line-height: 22px;
+    }
+
+    .socials {
+        .left {
+            @include flex-v-center;
+            gap: 9px;
+        }
+
+        button,
+        a {
+            font-size: 13px;
+            line-height: 22px;
+            color: inherit;
+            text-decoration: underline;
+        }
+    }
+
+    .location {
+        span {
+            max-width: 250px;
+            font-size: 13px;
+            line-height: 18px;
+
+        }
+    }
+
+}

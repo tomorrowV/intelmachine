@@ -1,0 +1,39 @@
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 34px;
+    z-index: 50;
+    transition: background-color .25s ease-in-out, box-shadow .25s ease-in-out;
+
+    &.scroll {
+        background-color: var(--light-color);
+        width: 100%;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+
+    &.scroll &__link {
+        color: var(--dark-color)
+    }
+
+
+    ul {
+        @include flex-v-center;
+        gap: 34px;
+    }
+
+    &__link {
+        @include EURegular;
+        font-size: 10px;
+        line-height: 22px;
+        color: var(--light-color);
+        text-transform: uppercase;
+        opacity: 0.8;
+        transition: opacity .25s ease-in-out, color .25s ease-in-out;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

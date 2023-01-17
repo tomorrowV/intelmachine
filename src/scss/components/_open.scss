@@ -1,0 +1,129 @@
+.open {
+    &__container {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__left,
+    &__consultations {
+        flex-shrink: 0;
+        flex-basis: 50%;
+    }
+
+    &__left {
+        padding: 50px 34px;
+
+        h2 {
+            max-width: 440px;
+
+            span {
+                color: var(--blue-color);
+            }
+        }
+    }
+
+    &__consultations {
+        background-color: var(--blue-color);
+        color: var(--light-color);
+        display: flex;
+
+        .left {
+            padding: 55px 50px 43px 30px;
+            flex-basis: 50%;
+            flex-shrink: 0;
+
+            h3 {
+                max-width: 250px;
+                @include EUSemiBold;
+                margin: 0 0 150px 0;
+                font-size: 17px;
+                line-height: 26px;
+            }
+        }
+
+        .right {
+            background-color: #3363D1;
+            flex-basis: 50%;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__bio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 140px;
+        text-align: center;
+
+        h4 {
+            @include EUSemiBold;
+            font-size: 15px;
+            line-height: 32px;
+            margin: 0;
+        }
+
+        span {
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+
+    &__avatar {
+        width: 130px;
+        height: 130px;
+        border-radius: 100%;
+        margin-bottom: 24px;
+        position: relative;
+
+        &:after {
+            content: '';
+            top: 15px;
+            right: 15px;
+            position: absolute;
+            background-color: #3CFF5A;
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+        }
+
+        img,
+        picture {
+            border-radius: 100%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__button {
+        width: 100%;
+    }
+
+    &-questions {
+        margin-top: 27px;
+        @include flex-all-sb;
+        gap: 10px;
+
+        span {
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+
+    &-questions__links {
+        @include flex-v-center;
+        flex-shrink: 0;
+        gap: 10px;
+
+        img,
+        svg {
+            width: 36px;
+            height: 36px;
+            flex-shrink: 0;
+        }
+    }
+}

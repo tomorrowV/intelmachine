@@ -1,0 +1,21 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/header";
+//
+@import "./components/hero";
+@import "./components/system";
+@import "./components/standart";
+@import "./components/open";
+//
+@import "./components/footer";
+
+
+// <picture>
+//     <source srcset="@path" type="image/webp">
+//     <img loading="lazy" src="@path" width="@width" height="@height">
+// </picture>

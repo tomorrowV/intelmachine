@@ -1,0 +1,55 @@
+.standart {
+    &__container {
+        display: flex;
+    }
+
+    &__video {
+        flex-basis: 50%;
+        flex-grow: 1;
+
+        img,
+        video,
+        picture {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__right {
+        border-top: 1px dashed var(--botticelli-color);
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        padding: 50px 50px 50px 41px;
+        height: 100%;
+
+        h2 {
+            max-width: 500px;
+            margin: 0 0 16px 0;
+
+            span {
+                display: block;
+                color: var(--blue-color);
+            }
+        }
+    }
+
+    &__head,
+    &__content {
+        max-width: 544px;
+    }
+
+    &__content {
+        padding-left: 10px;
+        margin: 200px 0 0;
+
+        li {
+            @include EUSemiBold;
+            font-size: 14px;
+            line-height: 20px;
+            color: #222222;
+            @include mb(17px);
+        }
+    }
+}
