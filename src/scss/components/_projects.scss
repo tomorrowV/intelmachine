@@ -1,1 +1,71 @@
-.projects-section {}
+.projects-section {
+    &__container {
+        padding: 60px 34px 30px;
+    }
+
+    &__head {
+        margin-bottom: 20px;
+    }
+
+    &__more {
+        margin-top: 30px;
+        min-width: 154px;
+    }
+
+    &-slider {
+        overflow: visible;
+    }
+}
+
+.projects-card {
+    background-color: var(--blue-color);
+    display: flex;
+    color: #EAF2FF;
+    max-width: 896px;
+    width: 100%;
+
+    &__content {
+        padding: 38px 30px;
+
+        h3 {
+            @include EUSemiBold;
+            font-size: 20px;
+            line-height: 30px;
+            margin: 0 0 45px;
+        }
+
+        span {
+            @include EUSemiBold;
+            font-size: 17px;
+            line-height: 24px;
+            display: inline-block;
+            margin: 0 0 24px;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 15px;
+            column-count: 2;
+        }
+
+        li {
+            @include EUSemiBold;
+            font-size: 13px;
+            line-height: 16px;
+            margin-bottom: 12px;
+        }
+    }
+
+    &__right {
+        height: 356px;
+        flex-basis: 328px;
+        flex-shrink: 0;
+
+        img,
+        picture {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}

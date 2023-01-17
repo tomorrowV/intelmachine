@@ -33,19 +33,37 @@
 import Swiper, { Navigation, Pagination } from "swiper";
 Swiper.use([Navigation, Pagination]);
 new Swiper(".articles-slider", {
-    slidesPerView: 4,
+    slidesPerView: 3,
     spaceBetween: 16,
     freeMode: false,
     speed: 1500,
     breakpoints: {
         1440: {
-            slidesPerView: 5,
+            slidesPerView: 4,
         },
         1650: {
-            slidesPerView: 5.5,
+            slidesPerView: 4.5,
         },
         1930: {
-            slidesPerView: 6,
+            slidesPerView: 5,
+        },
+    },
+});
+
+new Swiper(".projects-section-slider", {
+    slidesPerView: 1.4,
+    spaceBetween: 16,
+    freeMode: false,
+    speed: 1500,
+    breakpoints: {
+        1440: {
+            slidesPerView: 2,
+        },
+        1650: {
+            slidesPerView: 2.1,
+        },
+        1930: {
+            slidesPerView: 2.3,
         },
     },
 });
