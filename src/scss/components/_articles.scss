@@ -1,0 +1,83 @@
+.articles {
+    background-color: var(--athens-color);
+    border-bottom: 1px dashed var(--botticelli-color);
+
+    &__container {
+        padding: 100px 34px 55px;
+    }
+
+    &__head {
+        @include flex-all-sb;
+        margin-bottom: 20px;
+
+        a {
+            font-size: 14px;
+            line-height: 20px;
+            text-decoration-line: underline;
+            color: var(--pale-color);
+        }
+    }
+
+    &-slider {
+        overflow: visible;
+    }
+}
+
+.articles-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light-color);
+    max-width: 389px;
+    width: 100%;
+    transition: box-shadow .25s ease-in-out, transform .25s ease-in-out;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    &__image {
+        height: 182px;
+
+        img,
+        picture {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__content {
+        padding: 20px 30px;
+
+        h3 {
+            @include EUSemiBold;
+            font-size: 15px;
+            line-height: 20px;
+            margin: 0 0 13px;
+        }
+
+        p {
+            font-size: 13px;
+            line-height: 18px;
+            margin: 0 0 13px;
+        }
+    }
+
+    &__links {
+        @include flex-v-center;
+        gap: 24px;
+    }
+
+    &__more {
+        padding: 14px;
+        border-radius: 24px;
+        min-width: 116px;
+    }
+
+    &__link {
+        font-size: 11px;
+        line-height: 18px;
+        color: var(--pale-color);
+    }
+}

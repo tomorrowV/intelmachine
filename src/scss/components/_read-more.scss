@@ -1,0 +1,23 @@
+.read-more {
+    background-color: var(--athens-color);
+
+    &__container {
+        padding: 40px 34px 60px;
+    }
+
+    &__item {
+        margin-bottom: 24px;
+
+        p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 26px;
+        }
+    }
+
+    &__link {
+        font-size: 14px;
+        line-height: 20px;
+        text-decoration: underline;
+    }
+}

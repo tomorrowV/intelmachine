@@ -30,11 +30,25 @@
 // });
 
 // Подключение свайпера
-// import Swiper, { Navigation, Pagination } from 'swiper';
-// Swiper.use([Navigation, Pagination]);
-// const swiper = new Swiper(el, {
-//   slidesPerView: 'auto',
-// });
+import Swiper, { Navigation, Pagination } from "swiper";
+Swiper.use([Navigation, Pagination]);
+new Swiper(".articles-slider", {
+    slidesPerView: 4,
+    spaceBetween: 16,
+    freeMode: false,
+    speed: 1500,
+    breakpoints: {
+        1440: {
+            slidesPerView: 5,
+        },
+        1650: {
+            slidesPerView: 5.5,
+        },
+        1930: {
+            slidesPerView: 6,
+        },
+    },
+});
 
 // Подключение параллакса блоков при скролле
 // import Rellax from 'rellax';

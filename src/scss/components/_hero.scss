@@ -3,7 +3,7 @@ $options: (
     itemsClass: "hero__card",
     desktopGap: 1px,
     desktopElems: 4,
-    tablet: "1280px",
+    tablet: "1180px",
     tabletElems: 2,
     tabletGap: 30px,
     mobile: "600px",
@@ -54,6 +54,10 @@ $options: (
         display: flex;
         flex-direction: column;
 
+        &:nth-child(1) {
+            padding-left: 34px;
+        }
+
         &:not(:last-child) {
             border-right: 1px dashed var(--botticelli-color);
         }
@@ -88,7 +92,6 @@ $options: (
         }
     }
 }
-
 
 .hero-main {
     position: relative;

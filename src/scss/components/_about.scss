@@ -1,0 +1,127 @@
+$options: (
+    parentClass: "about-section__grid",
+    itemsClass: "about-section__card",
+    desktopGap: 1px,
+    desktopElems: 2,
+    tablet: "1180px",
+    tabletElems: 2,
+    tabletGap: 30px,
+    mobile: "600px",
+    mobileElems: 1,
+    mobileGap: 20px
+);
+@include flex-layout($options);
+
+
+.about-section {
+    background-color: var(--athens-color);
+    border-bottom: 1px dashed var(--botticelli-color);
+
+    &__container {
+        padding: 60px 34px 30px;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__inner {
+        display: flex;
+        gap: 41px;
+    }
+
+    &__left {
+        flex-basis: 50%;
+        flex-shrink: 0;
+    }
+
+    &__video {
+        height: 445px;
+        overflow: hidden;
+
+        img,
+        picture,
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__grid {
+        border-bottom: 1px dashed var(--botticelli-color);
+        margin-bottom: 40px;
+    }
+
+    &__card {
+        border-top: 1px dashed var(--botticelli-color);
+
+        &:nth-child(odd) {
+            border-right: 1px dashed var(--botticelli-color);
+        }
+
+        &:nth-child(even) {
+            padding-left: 38px;
+        }
+    }
+
+    &__info {
+        padding-bottom: 28px;
+        margin-bottom: 25px;
+        border-bottom: 1px dashed var(--botticelli-color);
+
+        p {
+            font-size: 14px;
+            line-height: 26px;
+            margin: 0;
+            @include mb(24px);
+            color: #222222;
+        }
+    }
+
+    &__callback {
+        @include flex-all-sb;
+        gap: 20px;
+    }
+
+    &__more {
+        min-width: 138px;
+    }
+
+    &__questions {
+        @include flex-all-sb;
+        gap: 30px;
+
+        span {
+            font-size: 14px;
+            line-height: 20px;
+            color: var(--dark-color);
+        }
+    }
+
+    &__links {
+        @include flex-v-center;
+        gap: 10px;
+    }
+}
+
+.about-section-card {
+    padding: 38px 45px 38px 0;
+    min-height: 175px;
+
+    h3 {
+        @include EUSemiBold;
+        font-size: 28px;
+        line-height: 28px;
+        color: #4274E9;
+        margin: 0 0 10px;
+    }
+
+    p {
+        @include EUSemiBold;
+        font-size: 14px;
+        line-height: 20px;
+        margin: 0;
+        color: var(--dark-color);
+    }
+}
