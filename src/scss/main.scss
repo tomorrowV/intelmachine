@@ -34,3 +34,8 @@
 //     <source srcset="@path" type="image/webp">
 //     <img loading="lazy" src="@path" width="@width" height="@height">
 // </picture>
+
+.empty {
+    padding: 50px 0;
+    @include flex-all-center;
+}

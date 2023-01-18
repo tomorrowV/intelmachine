@@ -67,6 +67,20 @@ new Swiper(".projects-section-slider", {
         },
     },
 });
+new Swiper(".projects-card__slider", {
+    nested: true,
+    slidesPerView: 1,
+    speed: 1500,
+    pagination: {
+        el: ".swiper-pagination",
+        type: "bullets",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
 
 // Подключение параллакса блоков при скролле
 // import Rellax from 'rellax';
