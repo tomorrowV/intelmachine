@@ -1,0 +1,15 @@
+input {
+    padding: 20px 18px;
+    @include EURegular;
+    font-size: 13px;
+    line-height: 22px;
+    border-radius: var(--radius);
+    border: 1px solid var(--botticelli-color);
+    color: #6F757C;
+    outline: none;
+
+    &::placeholder {
+        font: inherit;
+        color: inherit;
+    }
+}

@@ -3,8 +3,45 @@
         padding-bottom: 80px;
     }
 
+    &__head {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 50px;
+
+        p {
+            margin: 0 0 22px;
+            @include EUSemiBold;
+            font-size: 14px;
+            line-height: 20px;
+            color: var(--dark-color);
+        }
+    }
+
+    &__head-right {
+        flex-basis: 440px;
+    }
+
+
     &__grid {
         margin-bottom: 40px;
+    }
+}
+
+.blog-form {
+    &__inputs {
+        @include flex-v-center;
+        gap: 10px;
+        margin-bottom: 12px;
+    }
+
+    input {
+        flex-grow: 1;
+    }
+
+    &__button {
+        flex-shrink: 0;
+        min-width: 174px;
     }
 }
 
