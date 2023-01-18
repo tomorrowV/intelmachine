@@ -93,11 +93,36 @@ $options: (
     }
 }
 
+.hero-nav {
+    position: relative;
+    z-index: 2;
+    padding-left: 34px;
+    padding-top: 35px;
+    @include flex-v-center;
+    gap: 24px;
+
+    &__link {
+        @include EURegular;
+        font-size: 10px;
+        line-height: 22px;
+        color: var(--light-color);
+        text-transform: uppercase;
+        opacity: 0.8;
+        transition: opacity .25s ease-in-out, color .25s ease-in-out;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+
 .hero-main {
     position: relative;
     overflow: hidden;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-between;
 
     &__video {
         position: absolute;
@@ -130,7 +155,7 @@ $options: (
         position: relative;
         z-index: 2;
         padding: 0 34px 40px;
-        flex-grow: 1;
+
 
         h1 {
             @include EUSemiBold;

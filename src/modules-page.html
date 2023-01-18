@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+    @include('partials/preloader.html')
+    <div class="site-container">
+        @include('partials/header.html')
+        <main class="main">
+            <ul class="breadcrumbs list-reset">
+                <li><a href="#">Главная</a></li>
+                <li>Модули</li>
+            </ul>
+            <section class="production">
+                <div class="production__container fluid">
+                    <div class="production__head">
+                        <div class="left">
+                            <h1 class="production__title">Модули и участки линий
+                                производства сэндвич-панелей</h1>
+                            <div class="production__head-buttons">
+                                <button class="production__video-button btn-primary btn-reset">Смотреть видеопрезентацию
+                                </button>
+                                <button class="production__consultations-button btn-primary btn-reset">Получить
+                                    консультацию
+                                </button>
+                            </div>
+                        </div>
+                        <p>Единственный производитель автоматизированных линий
+                            для изготовления сэндвич-панелей в России</p>
+                    </div>
+                </div>
+                <div class="production__video">
+                    <picture>
+                        <source srcset="img/hero.webp" type="image/webp">
+                        <img height="440" src="img/hero.webp">
+                    </picture>
+                </div>
+                <div class="production__items fluid">
+                    <div class="production-item">
+                        <div class="production-item__label"></div>
+                        <p>Сокращение производственных затрат</p>
+                    </div>
+                    <div class="production-item">
+                        <div class="production-item__label"></div>
+                        <p>Модернизация действующих линий других производителей</p>
+                    </div>
+                    <div class="production-item">
+                        <div class="production-item__label"></div>
+                        <p>Повышение качества выпускаемой продукции</p>
+                    </div>
+                </div>
+            </section>
+            <section class="equipment">
+                <div class="equipment__container fluid">
+                    <div class="equipment__head">
+                        <h2 class="equipment__title section-title">Оборудование для производства сэндвич-панелей</h2>
+                    </div>
+                    <div class="equipment__grid">
+                        @include('partials/UI/equipment-card.html')
+                        @include('partials/UI/equipment-card.html')
+                        @include('partials/UI/equipment-card.html')
+                        @include('partials/UI/equipment-card.html')
+                        @include('partials/UI/equipment-card.html')
+                        @include('partials/UI/equipment-card.html')
+                        @include('partials/UI/equipment-card.html')
+                        @include('partials/UI/equipment-card.html')
+                    </div>
+                </div>
+            </section>
+        </main>
+        @include('partials/footer.html')
+    </div>
+</body>
+
+</html>

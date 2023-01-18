@@ -1,0 +1,102 @@
+$options: (
+    parentClass: "production__items",
+    itemsClass: "production-item",
+    desktopGap: 30px,
+    desktopElems: 3,
+    tablet: "1024px",
+    tabletElems: 2,
+    tabletGap: 30px,
+    mobile: "600px",
+    mobileElems: 1,
+    mobileGap: 20px
+);
+
+@include flex-layout($options);
+
+.production {
+    &__head {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 20px;
+        margin-bottom: 30px;
+
+        h1,
+        p {
+            margin: 0;
+        }
+
+        p {
+            font-size: 13px;
+            line-height: 22px;
+            max-width: 412px;
+        }
+    }
+
+    &__head-buttons {
+        margin-top: 23px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__video-button {
+        min-width: 263px;
+        background-color: var(--blue-color);
+
+        &:hover {
+            background-color: darken(#2252BF, 10%);
+        }
+    }
+
+    &__consultations-button {
+        min-width: 237px;
+    }
+
+    &__video {
+        margin-bottom: 60px;
+        width: 100%;
+        height: 440px;
+        position: relative;
+
+        &:after {
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: rgba(0, 0, 0, 0.35);
+        }
+
+        img,
+        video,
+        picture {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.production-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+
+    &__label {
+        width: 18px;
+        height: 3px;
+        background-color: var(--dark-color);
+        margin-top: 5px;
+    }
+
+    p {
+        @include EUSemiBold;
+        margin: 0;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--dark-color);
+        max-width: 260px;
+    }
+}

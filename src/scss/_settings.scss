@@ -22,6 +22,10 @@ html {
   color: var(--dark-color);
 }
 
+.main {
+  padding-top: 90px;
+}
+
 img {
   height: auto;
   max-width: 100%;
@@ -69,6 +73,12 @@ a {
   margin: 0 auto;
   padding: 0 20px;
   max-width: 1240px;
+  width: 100%;
+}
+
+.fluid {
+  margin: 0 auto;
+  max-width: calc(100% - 68px);
   width: 100%;
 }
 
@@ -125,4 +135,12 @@ p {
   line-height: 22px;
   color: var(--pale-color);
   margin: 0;
+}
+
+h1 {
+  @include EUSemiBold;
+  font-size: 44px;
+  line-height: 48px;
+  letter-spacing: -0.02em;
+  max-width: 800px;
 }

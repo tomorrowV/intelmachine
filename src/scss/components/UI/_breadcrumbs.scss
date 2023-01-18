@@ -1,0 +1,32 @@
+/* Style the list */
+
+.breadcrumbs {
+    padding: 0 34px;
+    @include flex-v-center;
+    margin-bottom: 130px;
+
+    li {
+        font-size: 11px;
+        line-height: 22px;
+        color: #6F757C;
+        opacity: 0.9;
+
+    }
+
+    a {
+        color: inherit;
+        transition: color .25s ease-out;
+
+        &:hover {
+            color: var(--blue-color);
+        }
+    }
+}
+
+
+
+.breadcrumbs li+li:before {
+    padding: 4px;
+    color: #6F757C;
+    content: "\007C";
+}

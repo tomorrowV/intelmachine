@@ -5,6 +5,8 @@
 @import "settings";
 
 @import "./components/UI/nav";
+@import "./components/UI/breadcrumbs";
+@import "./components/UI/equipment-card";
 
 // подключения компонентов страницы
 @import "./components/header";
@@ -17,6 +19,8 @@
 @import "./components/articles";
 @import "./components/read-more";
 @import "./components/projects";
+@import "./components/production";
+@import "./components/equipment";
 //
 @import "./components/footer";
 
