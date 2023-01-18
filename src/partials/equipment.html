@@ -1,0 +1,40 @@
+<section class="equipment">
+    <div class="equipment__container fluid">
+        <div class="equipment__head">
+            <h2 class="equipment__title section-title">Оборудование для производства сэндвич-панелей</h2>
+        </div>
+        <div class="equipment__switchers">
+            <button class="equipment__switcher active btn-reset">Все</button>
+            <button class="equipment__switcher btn-reset" data-tab="Автоматизация">Автоматизация</button>
+            <button class="equipment__switcher btn-reset" data-tab="Основное">Основное</button>
+            <button class="equipment__switcher btn-reset" data-tab="Повышение качества">Повышение
+                качества</button>
+        </div>
+        <div class="equipment__grid">
+            @include('./UI/equipment-card.html', {
+            label: "Автоматизация"
+            })
+            @include('./UI/equipment-card.html', {
+            label: "Основное"
+            })
+            @include('./UI/equipment-card.html', {
+            label: "Автоматизация"
+            })
+            @include('./UI/equipment-card.html', {
+            label: "Основное"
+            })
+            @include('./UI/equipment-card.html', {
+            label: "Основное"
+            })
+            @include('./UI/equipment-card.html', {
+            label: "Основное"
+            })
+            @include('./UI/equipment-card.html', {
+            label: "Повышение качества"
+            })
+            @include('./UI/equipment-card.html', {
+            label: "Повышение качества"
+            })
+        </div>
+    </div>
+</section>

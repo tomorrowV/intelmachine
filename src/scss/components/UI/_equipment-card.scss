@@ -2,6 +2,7 @@
     background-color: var(--porclain-color);
     max-width: 389px;
     width: 100%;
+    transition: box-shadow .25s ease-in-out, transform .25s ease-in-out;
 
     &__image {
         display: flex;
@@ -29,5 +30,10 @@
             padding: 14px;
             min-width: 116px;
         }
+    }
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     }
 }
