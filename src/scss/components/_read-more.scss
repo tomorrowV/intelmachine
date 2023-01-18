@@ -1,5 +1,7 @@
 .read-more {
-    background-color: var(--athens-color);
+    &.colored {
+        background-color: var(--athens-color);
+    }
 
     &__container {
         padding: 40px 34px 60px;
