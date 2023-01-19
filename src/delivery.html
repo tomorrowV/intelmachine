@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+    @include('partials/preloader.html')
+    <div class="site-container">
+        @include('partials/header.html')
+        <main class="main offset">
+            <ul class="breadcrumbs list-reset">
+                <li><a href="#">Главная</a></li>
+                <li>Оплата и доставка</li>
+            </ul>
+            <section class="delivery">
+                <div class="delivery__container fluid">
+                    <div class="delivery__head">
+                        <h1 class="delivery__title">Оплата и доставка</h1>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @include('partials/footer.html')
+    </div>
+</body>
+
+</html>
