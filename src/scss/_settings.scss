@@ -1,11 +1,7 @@
-html {
-  box-sizing: border-box;
-}
-
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 .page {
@@ -22,7 +18,7 @@ html {
   color: var(--dark-color);
 }
 
-.main {
+.main.offset {
   padding-top: 90px;
 }
 
@@ -80,6 +76,10 @@ a {
   margin: 0 auto;
   max-width: calc(100% - 68px);
   width: 100%;
+
+  @include desktop {
+    max-width: calc(100% - 40px);
+  }
 }
 
 p {

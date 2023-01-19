@@ -19,25 +19,101 @@
     }
 
     &__container {
-        padding: 13px 34px;
+        padding-top: 13px;
+        padding-bottom: 13px;
         @include flex-all-sb;
     }
 
-    // &__logo {
-    //     margin-right: 60px;
-    // }
+    &__logo {
+        @include tablet {
+            position: relative;
+            z-index: 101;
+        }
 
-    // &__nav {
-    //     margin-right: 100px;
-    // }
+        .light {
+            display: none;
+            animation: fade 1s ease-in-out;
+        }
+
+        &.active .light {
+            display: block;
+        }
+
+        &.active .blue {
+            display: none;
+        }
+    }
+
+    &__content {
+        @include flex-all-sb;
+        flex-grow: 1;
+        gap: 24px;
+
+        @include desktop {
+            gap: 20px;
+        }
+
+        @include tablet {
+            transform: translateX(100%);
+            transition: transform .25s ease-in-out;
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100vh;
+            width: 100%;
+            z-index: 100;
+            background-color: var(--blue-color);
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: initial;
+            padding: 60px 60px;
+            overflow: auto;
+
+            &.active {
+                transform: translateX(0)
+            }
+        }
+    }
+
     &__right {
         @include flex-v-center;
         gap: 24px;
+
+        @include desktop {
+            gap: 20px;
+        }
+
+        @include tablet {
+            margin-top: 130px;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
     }
 
     &__socials {
         @include flex-v-center;
         gap: 5px;
+
+        @include tablet {
+            order: 1;
+        }
+
+        button {
+            display: none;
+
+            @include tablet {
+                text-decoration: underline;
+                display: inline-block;
+                color: var(--light-color);
+                font-size: 13px;
+                line-height: 22px;
+                margin-left: 18px;
+            }
+        }
     }
 
     &__call {
@@ -49,13 +125,41 @@
         a {
             @include EUSemiBold;
             font-size: 14px;
+
+            @include tablet {
+                font-size: 22px;
+                line-height: 22px;
+                color: var(--light-color);
+            }
         }
 
         button {
             font-size: 11px;
-            text-decoration-line: underline;
+            text-decoration: underline;
             color: #4A494A;
 
+            @include tablet {
+                display: none;
+            }
         }
+    }
+
+    &__consultation {
+        display: none;
+
+        @include tablet {
+            display: inline-flex;
+            order: 3;
+            width: 100%;
+        }
+    }
+}
+
+.burger {
+    @include burger;
+
+    @include tablet {
+        z-index: 101;
+
     }
 }

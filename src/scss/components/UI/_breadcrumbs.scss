@@ -5,6 +5,10 @@
     @include flex-v-center;
     margin-bottom: 130px;
 
+    @include desktop {
+        margin-bottom: 80px;
+    }
+
     li {
         font-size: 11px;
         line-height: 22px;

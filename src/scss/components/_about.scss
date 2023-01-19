@@ -125,3 +125,9 @@ $options: (
         color: var(--dark-color);
     }
 }
+
+.about {
+    &__head {
+        margin-bottom: 40px;
+    }
+}

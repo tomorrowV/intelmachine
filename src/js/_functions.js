@@ -82,6 +82,23 @@ new Swiper(".projects-card__slider", {
     },
 });
 
+new Swiper(".history-slider", {
+    slidesPerView: 2.5,
+    speed: 1500,
+    spaceBetween: 16,
+    breakpoints: {
+        1440: {
+            slidesPerView: 3,
+        },
+        1650: {
+            slidesPerView: 3.5,
+        },
+        1930: {
+            slidesPerView: 5,
+        },
+    },
+});
+
 // Подключение параллакса блоков при скролле
 // import Rellax from 'rellax';
 // const rellax = new Rellax('.rellax');

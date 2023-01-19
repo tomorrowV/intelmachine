@@ -1,7 +1,28 @@
 .nav {
+    flex-grow: 1;
+    max-width: fit-content;
+    margin: 0 auto;
+
+    @include tablet {
+        flex-grow: initial;
+        margin: 0;
+        padding-top: 60px;
+    }
+
     &__menu {
-        @include flex-v-center;
+        @include flex-all-sb;
+
         gap: 24px;
+
+        @include desktop {
+            gap: 20px;
+        }
+
+        @include tablet {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
 
         @media screen and (min-width: 1440px) {
             gap: 60px;
@@ -14,5 +35,12 @@
         line-height: 22px;
         text-transform: uppercase;
         color: #222222;
+
+        @include tablet {
+            color: var(--light-color);
+            font-size: 18px;
+            line-height: 20px;
+            text-transform: initial;
+        }
     }
 }

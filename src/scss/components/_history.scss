@@ -1,0 +1,48 @@
+.history {
+    &__container {
+        padding-bottom: 80px;
+    }
+
+    &__head {
+        margin-bottom: 30px;
+    }
+
+    &-slider {
+        overflow: visible;
+    }
+}
+
+.history-item {
+    padding: 34px 32px 34px 30px;
+    background-color: var(--porclain-color);
+    max-width: 491px;
+    width: 100%;
+
+    h3 {
+        @include EUSemiBold;
+        font-size: 20px;
+        line-height: 32px;
+        margin: 0 0 20px;
+    }
+
+    &__desc {
+        margin-bottom: 20px;
+
+        p {
+
+            margin: 0;
+            @include mb(20px);
+            color: #222222;
+            font-size: 13px;
+            line-height: 20px;
+        }
+    }
+
+    a {
+        @include EUSemiBold;
+        font-size: 14px;
+        line-height: 20px;
+        text-decoration: underline;
+        color: var(--dark-color);
+    }
+}
