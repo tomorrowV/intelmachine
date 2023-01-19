@@ -36,8 +36,12 @@ $options: (
     }
 
     &__video {
-        height: 445px;
         overflow: hidden;
+
+        @media screen and (min-width: 1930px) {
+            height: 100%;
+            max-height: 600px;
+        }
 
         img,
         picture,
@@ -129,5 +133,16 @@ $options: (
 .about {
     &__head {
         margin-bottom: 40px;
+    }
+
+    &__banner {
+        @media screen and (min-width: 1441px) {
+            height: 500px;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
     }
 }

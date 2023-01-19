@@ -47,6 +47,10 @@
     max-width: 896px;
     width: 100%;
 
+    @media (min-width: 1440px) {
+        max-width: 100%;
+    }
+
     &__content {
         padding: 38px 30px;
 

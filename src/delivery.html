@@ -17,10 +17,64 @@
                     <div class="delivery__head">
                         <h1 class="delivery__title">Оплата и доставка</h1>
                     </div>
+                    <div class="delivery__info">
+                        <p>Остуществляем доставку оборудования по всей территории РФ и странам СНГ. Доставка возможна
+                            посредством транспортных компаний - наших партнеров, так и любыми другми транспортными
+                            компаниями по желанию заказчика.</p>
+                    </div>
                 </div>
             </section>
+            <section class="leasing">
+                <div class="leasing__container fluid">
+                    <div class="leasing__head">
+                        <h2 class="leasing__title section-title">Оплата и лизинг</h2>
+                    </div>
+                    <div class="leasing__inner">
+                        <div class="leasing__block leasing-block">
+                            <div class="leasing-block__top">
+                                <h3 class="leasing-block__title">В лизинг</h3>
+                                <p>Мы работаем с несколькими компаниями:</p>
+                            </div>
+                            <div class="leasing-block__bottom">
+                                <ul class="list-reset leasing-block__list">
+                                    <li>Сбербанк лизинг</li>
+                                    <li>Совкомбанк лизинг</li>
+                                    <li>Сименс лизинг</li>
+                                    <li>Восток лизинг</li>
+                                    <li>Центр лизинг</li>
+                                    <li>Балтик лизинг</li>
+                                </ul>
+                                <span>На индивидуальных условиях с лизинговой компанией</span>
+                            </div>
+                        </div>
+                        <div class="leasing__block leasing-block">
+                            <div class="leasing-block__top">
+                                <h3 class="leasing-block__title">Стандартные условия</h3>
+                                <p>Стандартные условия
+                                    Оплата основного этапа после подписания
+                                    договора. Оплата производится по индивидуальным условиям, которые прописаны в
+                                    договоре.
+                                    Как правило это:
+                                </p>
+                            </div>
+                            <div class="leasing-block__bottom">
+                                <ul class="list-reset">
+                                    <li>60% от стоимости поставляемого оборудования</li>
+                                    <li>30% по готовности к отгрузке</li>
+                                    <li>10% после проведения ПНР и ввода в эксплуатацию поставленного оборудования</li>
+                                </ul>
+                                <span>В соответствии с условиями основного договора</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            @include('partials/open-bordered.html')
         </main>
         @include('partials/footer.html')
+        @include('partials/UI/modal.html', {
+        label: "Получить консультацию"
+        })
     </div>
 </body>
 

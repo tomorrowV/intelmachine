@@ -91,7 +91,7 @@ new Swiper(".history-slider", {
             slidesPerView: 3,
         },
         1650: {
-            slidesPerView: 3.5,
+            slidesPerView: 4,
         },
         1930: {
             slidesPerView: 5,

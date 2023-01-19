@@ -19,6 +19,11 @@
 .team-card {
     &__avatar {
         display: flex;
+
+        img,
+        picture {
+            width: 100%;
+        }
     }
 
     h3 {

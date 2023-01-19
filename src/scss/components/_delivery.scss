@@ -1,0 +1,122 @@
+.delivery {
+    border-bottom: 1px dashed var(--botticelli-color);
+
+    &__container {
+        padding-bottom: 50px;
+    }
+
+    &__head {
+        margin-bottom: 50px;
+    }
+
+    &__info {
+        padding-left: 400px;
+
+        p {
+
+            @include EUSemiBold;
+            font-size: 16px;
+            line-height: 22px;
+            color: var(--dark-color);
+            position: relative;
+
+            &::after {
+                content: "";
+                top: 4px;
+                left: -30px;
+                width: 18px;
+                height: 3px;
+                position: absolute;
+                margin-bottom: 109px;
+                background-color: var(--dark-color);
+            }
+        }
+    }
+}
+
+.leasing {
+    &__container {
+        padding-top: 60px;
+        padding-bottom: 80px;
+    }
+
+    &__head {
+        margin-bottom: 30px;
+    }
+
+    &__inner {
+        display: flex;
+        background-color: var(--porclain-color);
+    }
+
+    &__block {
+        flex-basis: 50%;
+        flex-shrink: 0;
+
+        &:not(:last-child) {
+            border-right: 1px dashed var(--botticelli-color);
+        }
+    }
+}
+
+.leasing-block {
+    padding: 55px 40px;
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+        @include EUSemiBold;
+        font-size: 36px;
+        line-height: 44px;
+        color: #9CADC2;
+        margin: 0 0 12px;
+    }
+
+    p {
+        @include EUSemiBold;
+        margin: 0;
+        font-size: 15px;
+        line-height: 22px;
+        color: var(--dark-color);
+    }
+
+    &__top {
+        margin-bottom: 40px;
+    }
+
+    &__bottom {
+        margin-top: auto;
+    }
+
+    &__list {
+        column-count: 2;
+    }
+
+    li {
+        padding-left: 10px;
+        position: relative;
+        @include EUSemiBold;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 20px;
+
+        &::before {
+            content: "";
+            top: 6px;
+            left: 0;
+            width: 4px;
+            height: 4px;
+            border-radius: 100%;
+            background-color: var(--dark-color);
+            position: absolute;
+        }
+    }
+
+
+    span {
+        font-size: 13px;
+        line-height: 22px;
+        color: var(--pale-color);
+        opacity: 0.9;
+    }
+}
