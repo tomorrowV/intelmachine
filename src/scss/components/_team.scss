@@ -1,0 +1,35 @@
+.team {
+    border-bottom: 1px dashed var(--botticelli-color);
+
+    &__container {
+        padding-bottom: 80px;
+    }
+
+    &__head {
+        margin-bottom: 30px;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
+        gap: 40px 16px;
+    }
+}
+
+.team-card {
+    &__avatar {
+        display: flex;
+    }
+
+    h3 {
+        @include EUSemiBold;
+        font-size: 14px;
+        margin: 8px 0 4px;
+    }
+
+    p {
+        margin: 0;
+        font-size: 13px;
+        line-height: 19px;
+    }
+}

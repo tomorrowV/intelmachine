@@ -1,0 +1,23 @@
+.requisites {
+    padding: 50px 0;
+
+    &__head {
+        margin-bottom: 25px;
+    }
+
+    &__info {
+        max-width: 590px;
+
+        span,
+        p {
+            font-size: 14px;
+            line-height: 26px;
+            color: #222;
+        }
+
+        p {
+            margin: 0;
+            @include mb(20px);
+        }
+    }
+}
