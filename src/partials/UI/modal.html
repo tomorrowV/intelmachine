@@ -1,9 +1,62 @@
-<div class="modal">
+<div class="modal" id="modal-order">
     <form action="" class="modal-form">
+        <button type="button" class="modal-close btn-reset">
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="11.3125" width="2" height="16" transform="rotate(45 11.3125 0)" fill="black" />
+                <rect x="12.7266" y="11.3137" width="2" height="16" transform="rotate(135 12.7266 11.3137)"
+                    fill="black" />
+            </svg>
+        </button>
         <h3>Заполните данные и мы свяжемся с вами
             и ответим на все вопросы</h3>
-        <input type="text" placeholder="Имя *">
-        <input type="tel" placeholder="Телефон*">
-        <button class="modal-form__btn btn-primary btn-reset">@label</button>
+        <div class="modal-form__inputs">
+            <input type="text" placeholder="Имя *">
+            <input type="tel" placeholder="Телефон*">
+            <button class="modal-form__btn btn-primary btn-reset">Заказать</button>
+            <label class="checkbox-wrapper">Согласен на обработку <a href="policy.html">персональных
+                    данных</a>
+                <input type="checkbox" name="terms" checked>
+                <span class="checkmark"></span>
+            </label>
+        </div>
     </form>
+</div>
+
+<div class="modal" id="modal-consultation">
+    <form action="" class="modal-form">
+        <button type="button" class="modal-close btn-reset">
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="11.3125" width="2" height="16" transform="rotate(45 11.3125 0)" fill="black" />
+                <rect x="12.7266" y="11.3137" width="2" height="16" transform="rotate(135 12.7266 11.3137)"
+                    fill="black" />
+            </svg>
+        </button>
+        <h3>Заполните данные и мы свяжемся с вами
+            и ответим на все вопросы</h3>
+        <div class="modal-form__inputs">
+            <input type="text" placeholder="Имя *">
+            <input type="tel" placeholder="Телефон*">
+            <button class="modal-form__btn btn-primary btn-reset">Заказать</button>
+            <label class="checkbox-wrapper">Согласен на обработку <a href="policy.html">персональных
+                    данных</a>
+                <input type="checkbox" name="terms" checked>
+                <span class="checkmark"></span>
+            </label>
+        </div>
+    </form>
+</div>
+
+
+<div class="thanks-modal" id="thanks-modal">
+    <div class="thanks-modal__block">
+        <button type="button" class="thanks-modal__close btn-reset">
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="11.3125" width="2" height="16" transform="rotate(45 11.3125 0)" fill="black" />
+                <rect x="12.7266" y="11.3137" width="2" height="16" transform="rotate(135 12.7266 11.3137)"
+                    fill="black" />
+            </svg>
+        </button>
+        <h3>Спасибо! Ваша заявка принята</h3>
+        <p>Наш специалист перезвонит вам в течении дня</p>
+    </div>
 </div>
