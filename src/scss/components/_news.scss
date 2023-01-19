@@ -1,0 +1,94 @@
+.entry {
+    &__container {
+        padding-bottom: 40px;
+    }
+
+    &__head {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 50px;
+
+        p {
+            margin: 0 0 22px;
+            @include EUSemiBold;
+            font-size: 14px;
+            line-height: 20px;
+            color: var(--dark-color);
+        }
+    }
+
+    &__head-right {
+        flex-basis: 440px;
+    }
+
+
+    &__grid {
+        margin-bottom: 40px;
+    }
+
+    &__content {
+        max-width: 795px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+.entry-form {
+    &__inputs {
+        @include flex-v-center;
+        gap: 10px;
+        margin-bottom: 12px;
+    }
+
+    input {
+        flex-grow: 1;
+    }
+
+    &__button {
+        flex-shrink: 0;
+        min-width: 174px;
+    }
+}
+
+.entry-content {
+    &__image {
+        margin-bottom: 60px;
+    }
+
+    &__info {
+        margin-bottom: 80px;
+
+        h3 {
+            @include EUSemiBold;
+            font-size: 16px;
+            line-height: 28px;
+            margin: 0 0 30px;
+
+            span {
+                text-decoration: underline;
+            }
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 28px;
+            margin: 0 0 30px;
+            color: var(--dark-color);
+        }
+    }
+}
+
+.interesting {
+    background-color: #F3F4F8;
+    padding-bottom: 60px;
+
+    &__container {
+        border-bottom: 1px dashed var(--botticelli-color);
+        padding: 40px 0 60px;
+    }
+
+    &__head {
+        margin-bottom: 20px;
+    }
+}

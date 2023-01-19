@@ -15,7 +15,90 @@
                     МИК</li>
             </ul>
             <section class="entry">
+                <div class="entry__container fluid">
+                    <div class="entry__head">
+                        <h1 class="entry__title">ООО "Интелмашин"<br /> является участником<br /> МИК</h1>
+                        <div class="entry__head-right">
+                            <p>Подпишитесь на нашу рассылку и будьте в курсе актуальных новостей</p>
+                            <form class="entry__form entry-form">
+                                <div class="entry-form__inputs">
+                                    <input type="email" placeholder="*Введите ваш E-mail" required>
+                                    <button class="entry-form__button btn-primary btn-reset">Подписаться</button>
+                                </div>
+                                <div class="checkbox-block">
+                                    <label class="checkbox-wrapper">Согласен на обработку <a
+                                            href="policy.html">персональных
+                                            данных</a>
+                                        <input type="checkbox" name="terms" checked>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="entry__content entry-content">
+                        <div class="entry__image entry-content__image">
+                            <img width="794" height="466" src="img/entry-image.jpg" alt="">
+                        </div>
+                        <div class="entry-content__info">
+                            <h3><span>Правительство Москвы</span> учредило фонд <span>"Московский инновационный
+                                    кластер"</span>, из
+                                которого
+                                финансируется столичный инновационный кластер.</h3>
+                            <p>26 ноября 2018 года президент России Владимир Путин подписал указ о создании в Москве
+                                единого инновационного кластера. </p>
 
+                            <p>Задача инновационного кластера - объединить всех, кто работает в сфере высоких
+                                технологий:
+                                ученых, изобретателей, производителей. Кластер укрепит связи между предприятиями из
+                                разных
+                                отраслей, станет площадкой для обмена идеями и новых проектов, поиска партнеров и
+                                поддержки
+                                стартапов, откроет новые возможности его участников для выхода на международный рынок.
+                            </p>
+
+                            <p>Компания ООО «Интелмашин» с 2022 года является участником МИК (Московского
+                                инновационного
+                                кластера).
+                            </p>
+                        </div>
+                        <div class="entry__image entry-content__image">
+                            <img width="794" height="466" src="img/entry-image.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="interesting">
+                <div class="interesting__container fluid">
+                    <div class="interesting__head">
+                        <h2 class="interesting__title section-title">Вам может быть интересно</h2>
+                    </div>
+                    <div class="interesting-slider articles-slider swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                @include('partials/UI/article-card.html')
+                            </div>
+                            <div class="swiper-slide">
+                                @include('partials/UI/article-card.html')
+                            </div>
+                            <div class="swiper-slide">
+                                @include('partials/UI/article-card.html')
+                            </div>
+                            <div class="swiper-slide">
+                                @include('partials/UI/article-card.html')
+                            </div>
+                            <div class="swiper-slide">
+                                @include('partials/UI/article-card.html')
+                            </div>
+                            <div class="swiper-slide">
+                                @include('partials/UI/article-card.html')
+                            </div>
+                            <div class="swiper-slide">
+                                @include('partials/UI/article-card.html')
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
         @include('partials/footer.html')
