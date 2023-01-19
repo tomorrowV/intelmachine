@@ -50,6 +50,33 @@ new Swiper(".articles-slider", {
     },
 });
 
+new Swiper(".watch-slider", {
+    slidesPerView: 4,
+    spaceBetween: 16,
+    freeMode: false,
+    speed: 1500,
+    breakpoints: {
+        991: {
+            slidesPerView: 3.5,
+        },
+        1100: {
+            slidesPerView: 3.7,
+        },
+        1260: {
+            slidesPerView: 4,
+        },
+        1650: {
+            slidesPerView: 4.5,
+        },
+        1930: {
+            slidesPerView: 6,
+        },
+        2100: {
+            slidesPerView: 7,
+        },
+    },
+});
+
 new Swiper(".projects-section-slider", {
     slidesPerView: 1.4,
     spaceBetween: 16,
@@ -98,7 +125,20 @@ new Swiper(".history-slider", {
         },
     },
 });
-
+new Swiper(".module-item-slider", {
+    nested: true,
+    slidesPerView: 1,
+    speed: 1500,
+    pagination: {
+        el: ".swiper-pagination",
+        type: "bullets",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
 // Подключение параллакса блоков при скролле
 // import Rellax from 'rellax';
 // const rellax = new Rellax('.rellax');

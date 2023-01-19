@@ -24,6 +24,10 @@
 
     &__head {
         margin-bottom: 85px;
+
+        h1 {
+            margin: 0;
+        }
     }
 
     &__grid {
@@ -100,35 +104,4 @@
         height: 100%;
     }
 
-    .swiper-slide {
-        display: flex;
-    }
-
-    .swiper-button-next {
-        right: 5px;
-    }
-
-    .swiper-button-prev {
-        left: 5px;
-    }
-
-    .swiper-button-prev,
-    .swiper-button-next {
-        &:after {
-            display: none;
-        }
-    }
-
-    .swiper-pagination-bullet {
-        width: 20px;
-        height: 3px;
-        background-color: var(--light-color);
-        opacity: 1;
-        border-radius: 0;
-        transition: background-color .25s ease-in-out;
-
-        &-active {
-            background-color: var(--accent-color);
-        }
-    }
 }

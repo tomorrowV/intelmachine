@@ -9,6 +9,10 @@
         flex-basis: 50%;
     }
 
+    &.module-open &__left-border {
+        border-top: none;
+    }
+
     &__left {
         height: auto;
         padding: 50px 34px;
