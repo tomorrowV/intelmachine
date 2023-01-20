@@ -9,6 +9,11 @@
         justify-content: space-between;
         margin-bottom: 50px;
 
+        @include tablet {
+            flex-direction: column;
+            gap: 15px;
+        }
+
         h1 {
             margin: 0;
         }
@@ -24,11 +29,26 @@
 
     &__head-right {
         flex-basis: 440px;
+
+        @include tablet {
+            flex-basis: auto;
+        }
     }
 
 
     &__grid {
         margin-bottom: 40px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 16px;
+
+        @include small-tablet {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media screen and (max-width: 650px) {
+            grid-template-columns: 1fr;
+        }
     }
 }
 
@@ -46,20 +66,9 @@
     &__button {
         flex-shrink: 0;
         min-width: 174px;
+
+        @include mobile {
+            min-width: 118px;
+        }
     }
 }
-
-$options: (
-    parentClass: "blog__grid",
-    itemsClass: "blog__grid articles-card",
-    desktopGap: 16px,
-    desktopElems: 4,
-    tablet: "1440px",
-    tabletElems: 3,
-    tabletGap: 16px,
-    mobile: "1024px",
-    mobileElems: 1,
-    mobileGap: 20px
-);
-
-@include flex-layout($options);
