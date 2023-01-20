@@ -1,6 +1,10 @@
-const addClass = (elem, className) => elem.classList.add(className);
-const removeClass = (elem, className) => elem.classList.remove(className);
-const toggleClass = (elem, className) => elem.classList.toggle(className);
+import { tabFunc, addClass, removeClass, toggleClass } from "./components/ex";
+
+tabFunc(
+    ".configurations__tabs",
+    ".configurations__tab",
+    ".configurations-content"
+);
 
 const header = document.querySelector(".header");
 if (header) {

@@ -139,6 +139,16 @@ new Swiper(".module-item-slider", {
         prevEl: ".swiper-button-prev",
     },
 });
+
+new Swiper(".branch-slider", {
+    slidesPerView: 1,
+    speed: 1500,
+
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
 // Подключение параллакса блоков при скролле
 // import Rellax from 'rellax';
 // const rellax = new Rellax('.rellax');
