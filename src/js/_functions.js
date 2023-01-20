@@ -38,14 +38,27 @@ new Swiper(".articles-slider", {
     freeMode: false,
     speed: 1500,
     breakpoints: {
+        319: {
+            slidesPerView: 1.1,
+            spaceBetween: 10,
+        },
+        576: {
+            slidesPerView: 2,
+        },
+        991: {
+            slidesPerView: 3,
+        },
+        1100: {
+            slidesPerView: 3.5,
+        },
         1440: {
             slidesPerView: 4,
         },
-        1650: {
-            slidesPerView: 4.5,
-        },
         1930: {
             slidesPerView: 5,
+        },
+        2000: {
+            slidesPerView: 6,
         },
     },
 });

@@ -27,7 +27,7 @@
     display: flex;
     flex-direction: column;
     background-color: var(--light-color);
-    max-width: 389px;
+
     width: 100%;
     transition: box-shadow .25s ease-in-out, transform .25s ease-in-out;
 
@@ -43,6 +43,10 @@
     &__image {
         height: 182px;
 
+        @include mobile {
+            height: 147px;
+        }
+
         img,
         picture {
             width: 100%;
@@ -54,17 +58,31 @@
     &__content {
         padding: 20px 30px;
 
+        @include mobile {
+            padding: 25px 20px;
+        }
+
         h3 {
             @include EUSemiBold;
             font-size: 15px;
             line-height: 20px;
             margin: 0 0 13px;
+
+            @include mobile {
+                line-height: 18px;
+                margin: 0 0 16px;
+            }
         }
 
         p {
             font-size: 13px;
             line-height: 18px;
             margin: 0 0 13px;
+
+            @include mobile {
+                font-size: 12px;
+                line-height: 18px;
+            }
         }
     }
 
@@ -77,6 +95,13 @@
         padding: 14px;
         border-radius: 24px;
         min-width: 116px;
+
+        @include mobile {
+            padding: 10px 0;
+            min-width: 110px;
+            font-size: 11px;
+            line-height: 22px;
+        }
     }
 
     &__link {
