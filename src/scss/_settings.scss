@@ -101,6 +101,12 @@ p {
   line-height: 22px;
   border-radius: var(--radius);
   transition: background-color .25s ease-in-out;
+
+  @include mobile {
+    padding: 11px;
+    font-size: 11px;
+    line-height: 22px;
+  }
 }
 
 .btn-primary {
@@ -127,9 +133,19 @@ p {
   line-height: 32px;
   margin: 0;
 
+  @include small-tablet {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
   &.lg {
     font-size: 36px;
     line-height: 40px;
+
+    @include small-tablet {
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 }
 
@@ -147,6 +163,11 @@ h1 {
   line-height: 48px;
   letter-spacing: -0.02em;
   max-width: 800px;
+
+  @include small-tablet {
+    font-size: 32px;
+    line-height: 34px;
+  }
 }
 
 
@@ -195,6 +216,10 @@ h1 {
     span {
       font-size: 14px;
       line-height: 22px;
+
+      @include mobile {
+        max-width: 120px;
+      }
     }
 
     &.flex {

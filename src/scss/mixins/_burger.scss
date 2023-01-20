@@ -1,7 +1,6 @@
 /* stylelint-disable */
 
 @mixin burger {
-  display: none;
 
   @include tablet {
     --burger-width: 18px;

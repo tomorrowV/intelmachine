@@ -7,18 +7,39 @@
 
     &__head {
         margin-bottom: 50px;
+
+        @include small-tablet {
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            margin: 0;
+        }
     }
 
     &__info {
         padding-left: 400px;
 
-        p {
+        @include tablet {
+            padding-left: 200px;
+        }
 
+        @include small-tablet {
+            padding-left: 30px;
+        }
+
+        p {
+            margin: 0;
             @include EUSemiBold;
             font-size: 16px;
             line-height: 22px;
             color: var(--dark-color);
             position: relative;
+
+            @include small-tablet {
+                font-size: 13px;
+                line-height: 17px;
+            }
 
             &::after {
                 content: "";
@@ -47,6 +68,10 @@
     &__inner {
         display: flex;
         background-color: var(--porclain-color);
+
+        @include tablet {
+            flex-direction: column;
+        }
     }
 
     &__block {
@@ -55,6 +80,11 @@
 
         &:not(:last-child) {
             border-right: 1px dashed var(--botticelli-color);
+
+            @include tablet {
+                border-right: 0;
+                border-bottom: 1px dashed var(--botticelli-color);
+            }
         }
     }
 }
@@ -64,12 +94,21 @@
     display: flex;
     flex-direction: column;
 
+    @include small-tablet {
+        padding: 25px 20px 30px;
+    }
+
     h3 {
         @include EUSemiBold;
         font-size: 36px;
         line-height: 44px;
         color: #9CADC2;
         margin: 0 0 12px;
+
+        @include small-tablet {
+            font-size: 25px;
+            line-height: 44px;
+        }
     }
 
     p {
@@ -78,10 +117,19 @@
         font-size: 15px;
         line-height: 22px;
         color: var(--dark-color);
+
+        @include small-tablet {
+            font-size: 13px;
+            line-height: 17px;
+        }
     }
 
     &__top {
         margin-bottom: 40px;
+
+        @include small-tablet {
+            margin-bottom: 30px;
+        }
     }
 
     &__bottom {
@@ -99,6 +147,11 @@
         font-size: 14px;
         line-height: 20px;
         margin-bottom: 20px;
+
+        @include small-tablet {
+            font-size: 13px;
+            line-height: 17px;
+        }
 
         &::before {
             content: "";

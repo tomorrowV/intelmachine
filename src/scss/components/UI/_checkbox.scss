@@ -12,6 +12,12 @@
     user-select: none;
     color: var(--pale-color);
 
+    @include mobile {
+        font-size: 11px;
+        line-height: 22px;
+
+    }
+
     input {
         position: absolute;
         opacity: 0;
@@ -29,6 +35,10 @@
         background-color: transparent;
         border: 1px solid var(--botticelli-color);
         border-radius: 2px;
+
+        @include mobile {
+            top: 0px;
+        }
 
         &:after {
             content: "";

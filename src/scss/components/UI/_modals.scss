@@ -34,12 +34,21 @@
     max-width: 500px;
     position: relative;
 
+    @include mobile {
+        padding: 40px 20px;
+        max-width: calc(100% - 40px);
+    }
+
     h3 {
         @include EUSemiBold;
         font-size: 18px;
         line-height: 24px;
         text-align: center;
         margin: 0 0 33px;
+
+        @include mobile {
+            margin-bottom: 24px;
+        }
     }
 
     &__inputs {
@@ -49,6 +58,10 @@
         max-width: 324px;
         width: 100%;
         gap: 10px;
+
+        @include mobile {
+            max-width: 270px;
+        }
 
         input,
         button {
@@ -99,6 +112,11 @@
         @include flex-all-center;
         flex-direction: column;
         text-align: center;
+
+        @include mobile {
+            max-width: calc(100% - 40px);
+            height: 217px;
+        }
     }
 
     h3 {
@@ -114,5 +132,9 @@
         line-height: 20px;
         margin: 0;
         color: var(--dark-color);
+
+        @include mobile {
+            max-width: 290px;
+        }
     }
 }

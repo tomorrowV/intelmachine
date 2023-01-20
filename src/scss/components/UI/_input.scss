@@ -8,6 +8,12 @@ input {
     color: #6F757C;
     outline: none;
 
+    @include mobile {
+        padding: 11px;
+        font-size: 12px;
+        line-height: 22px;
+    }
+
     &::placeholder {
         font: inherit;
         color: inherit;
