@@ -1,4 +1,6 @@
 .branch-top {
+    overflow: hidden;
+
     &__head {
         display: flex;
         align-items: flex-start;
@@ -153,6 +155,8 @@ $options2: (
 
 
 .branch {
+    overflow: hidden;
+
     &__inner {
         display: flex;
     }

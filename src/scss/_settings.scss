@@ -35,6 +35,10 @@ a {
 
 .site-container {
   overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+
+  &.visible {
+    overflow: visible;
+  }
 }
 
 .is-hidden {
@@ -176,5 +180,31 @@ h1 {
 
   &-active {
     background-color: var(--accent-color);
+  }
+}
+
+.contact-us {
+  &__button {
+    min-width: 237px;
+    width: 100%;
+    margin-bottom: 27px;
+  }
+
+  &__questions {
+
+    span {
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    &.flex {
+      @include flex-v-center;
+      gap: 24px;
+    }
+  }
+
+  &__links {
+    @include flex-v-center;
+    gap: 10px;
   }
 }

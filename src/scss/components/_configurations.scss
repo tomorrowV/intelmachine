@@ -1,10 +1,14 @@
 .configurations {
 
     &__tabs {
-        padding: 90px 34px 0 34px;
-        margin-bottom: 55px;
+        padding: 90px 34px 15px 34px;
+        margin-bottom: 40px;
         @include flex-v-center;
         gap: 24px;
+        position: sticky;
+        top: 0;
+        background-color: var(--light-color);
+        z-index: 5;
     }
 
     &__tab {

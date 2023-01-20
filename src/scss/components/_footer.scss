@@ -3,7 +3,6 @@
     color: #A8B9BF;
 
     &__container {
-        max-width: calc(100% - 68px);
         padding: 65px 0 47px;
         margin-bottom: 36px;
         border-bottom: 1px dashed #777d83;
@@ -12,7 +11,18 @@
         justify-content: space-between;
         gap: 20px;
 
+        @include small-tablet {
+            gap: 40px;
+            flex-direction: column;
+        }
+
+        @include mobile {
+            gap: 70px;
+
+        }
     }
+
+
 
     &__rights {
         padding-bottom: 36px;
@@ -21,7 +31,17 @@
         font-size: 11px;
         line-height: 17px;
 
+        @include small-tablet {
+            flex-wrap: wrap;
+            font-size: 10px;
+            line-height: 16px;
+        }
+
         .private {
+            @include small-tablet {
+                order: -2;
+            }
+
             max-width: 120px;
         }
 
@@ -31,6 +51,10 @@
 
         .business {
             max-width: 200px;
+
+            @include small-tablet {
+                order: -1;
+            }
 
             &>div {
                 display: flex;
@@ -43,28 +67,64 @@
         .links {
             @include flex-v-center;
             gap: 20px;
+
+            @include small-tablet {
+                gap: 14px;
+
+                svg {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
         }
     }
 
     &__logo {
+
         transform: translateY(-25px);
+
+        @include small-tablet {
+            order: 1;
+            transform: translateY(0);
+            margin: 0 auto;
+
+        }
     }
 
     &__nav {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
+        column-gap: 100px;
+        column-count: 2;
+
+        @include tablet {
+            column-gap: 20px;
+            column-count: 1;
+        }
+
+        @include small-tablet {
+            column-count: 2;
+            column-gap: 40px;
+        }
+
+        li {
+            margin-bottom: 30px;
+        }
     }
 
     &__nav-link {
         font-size: 13px;
         line-height: 18px;
     }
+
 }
 
 .footer-contacts {
     // flex-basis: 303px;
     flex-basis: 25%;
+
+    @include small-tablet {
+        width: 100%;
+        flex-basis: 100%;
+    }
 
     &__item {
         display: flex;
