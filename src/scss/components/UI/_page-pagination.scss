@@ -2,6 +2,10 @@
     @include flex-all-center;
     gap: 10px;
 
+    @include mobile {
+        gap: 5px;
+    }
+
     &__item {
         width: 44px;
         height: 44px;
@@ -12,6 +16,13 @@
         line-height: 22px;
         @include EUSemiBold;
         cursor: pointer;
+
+        @include mobile {
+            width: 30px;
+            height: 30px;
+            font-size: 12px;
+            line-height: 22px;
+        }
 
         &.present {
             color: var(--light-color);
