@@ -10,7 +10,14 @@
     &__switchers {
         @include flex-v-center;
         gap: 24px;
-        margin-bottom: 24px
+        margin-bottom: 24px;
+
+        @include mobile {
+            display: grid;
+            grid-template-columns: repeat(4, max-content);
+            overflow: auto;
+            width: 100%;
+        }
     }
 
     &__switcher {
@@ -20,6 +27,11 @@
         color: var(--gray-color);
         transition: color .25s ease-in-out;
         position: relative;
+
+        @include mobile {
+            font-size: 13px;
+            line-height: 20px;
+        }
 
         &:not(.active):after {
             content: "";
@@ -45,19 +57,24 @@
         }
     }
 
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 16px;
+    }
 }
 
-$options: (
-    parentClass: "equipment__grid",
-    itemsClass: "equipment__card",
-    desktopGap: 16px,
-    desktopElems: 5,
-    tablet: "1440px",
-    tabletElems: 3,
-    tabletGap: 16px,
-    mobile: "600px",
-    mobileElems: 1,
-    mobileGap: 20px
-);
+// $options: (
+//     parentClass: "equipment__grid",
+//     itemsClass: "equipment__card",
+//     desktopGap: 16px,
+//     desktopElems: 5,
+//     tablet: "1440px",
+//     tabletElems: 3,
+//     tabletGap: 16px,
+//     mobile: "600px",
+//     mobileElems: 1,
+//     mobileGap: 20px
+// );
 
-@include flex-layout($options);
+// @include flex-layout($options);

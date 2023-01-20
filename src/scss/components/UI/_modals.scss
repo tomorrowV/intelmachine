@@ -9,8 +9,14 @@
     display: none;
     align-items: center;
     justify-content: center;
-
     animation: fade .25s ease-in-out;
+
+
+    @include tablet {
+        align-items: flex-start;
+        padding: 100px 0;
+        overflow: auto;
+    }
 
     &.show {
         display: flex;
@@ -37,6 +43,7 @@
     @include mobile {
         padding: 40px 20px;
         max-width: calc(100% - 40px);
+
     }
 
     h3 {

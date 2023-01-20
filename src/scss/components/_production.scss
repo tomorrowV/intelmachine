@@ -21,6 +21,10 @@ $options: (
         gap: 20px;
         margin-bottom: 30px;
 
+        @include tablet {
+            flex-direction: column;
+        }
+
         h1,
         p {
             margin: 0;
@@ -38,11 +42,21 @@ $options: (
         display: flex;
         align-items: center;
         gap: 10px;
+
+        @include mobile {
+            gap: 5px;
+        }
     }
 
     &__video-button {
         min-width: 263px;
         background-color: var(--blue-color);
+
+        @include mobile {
+            min-width: 50%;
+            padding: 10px;
+            font-size: 10px;
+        }
 
         &:hover {
             background-color: darken(#2252BF, 10%);
@@ -51,6 +65,12 @@ $options: (
 
     &__consultations-button {
         min-width: 237px;
+
+        @include mobile {
+            min-width: 50%;
+            padding: 10px;
+            font-size: 10px;
+        }
     }
 
     &__video {
@@ -58,6 +78,11 @@ $options: (
         width: 100%;
         height: 440px;
         position: relative;
+
+        @include mobile {
+            height: 380px;
+            margin-bottom: 50px;
+        }
 
         &:after {
             content: '';

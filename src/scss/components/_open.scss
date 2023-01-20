@@ -37,6 +37,7 @@
 
         @include desktop {
             flex-basis: 45%;
+            padding: 50px 20px;
         }
 
         @include tablet {
@@ -77,6 +78,10 @@
 
         .left {
             padding: 55px 50px 43px 30px;
+
+            @include desktop {
+                padding: 40px 50px 35px 20px;
+            }
 
             @include mobile {
                 padding: 16px 20px 35px;

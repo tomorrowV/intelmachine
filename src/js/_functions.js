@@ -96,6 +96,15 @@ new Swiper(".projects-section-slider", {
     freeMode: false,
     speed: 1500,
     breakpoints: {
+        319: {
+            slidesPerView: 1,
+        },
+        991: {
+            slidesPerView: 1.2,
+        },
+        1100: {
+            slidesPerView: 1.5,
+        },
         1440: {
             slidesPerView: 2,
         },
