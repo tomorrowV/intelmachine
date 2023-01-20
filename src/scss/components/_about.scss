@@ -1,16 +1,16 @@
-$options: (
-    parentClass: "about-section__grid",
-    itemsClass: "about-section__card",
-    desktopGap: 1px,
-    desktopElems: 2,
-    tablet: "1180px",
-    tabletElems: 2,
-    tabletGap: 30px,
-    mobile: "600px",
-    mobileElems: 1,
-    mobileGap: 20px
-);
-@include flex-layout($options);
+// $options: (
+//     parentClass: "about-section__grid",
+//     itemsClass: "about-section__card",
+//     desktopGap: 1px,
+//     desktopElems: 2,
+//     tablet: "1180px",
+//     tabletElems: 2,
+//     tabletGap: 30px,
+//     mobile: "600px",
+//     mobileElems: 1,
+//     mobileGap: 20px
+// );
+// @include flex-layout($options);
 
 
 .about-section {
@@ -19,6 +19,15 @@ $options: (
 
     &__container {
         padding: 60px 34px 30px;
+
+        @include desktop {
+            padding: 50px 20px 50px;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     &__title {
@@ -28,11 +37,19 @@ $options: (
     &__inner {
         display: flex;
         gap: 41px;
+
+        @include tablet {
+            flex-direction: column;
+        }
     }
 
     &__left {
         flex-basis: 50%;
         flex-shrink: 0;
+
+        @include tablet {
+            flex-basis: auto;
+        }
     }
 
     &__video {
@@ -41,6 +58,15 @@ $options: (
         @media screen and (min-width: 1930px) {
             height: 100%;
             max-height: 600px;
+        }
+
+        @include tablet {
+            height: 400px;
+        }
+
+        @include mobile {
+            height: 240px;
+            margin: 0 -20px;
         }
 
         img,
@@ -66,6 +92,10 @@ $options: (
 
         &:nth-child(even) {
             padding-left: 38px;
+
+            @include mobile {
+                padding-left: 20px;
+            }
         }
     }
 
@@ -73,6 +103,12 @@ $options: (
         padding-bottom: 28px;
         margin-bottom: 25px;
         border-bottom: 1px dashed var(--botticelli-color);
+
+        @include mobile {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 40px;
+        }
 
         p {
             font-size: 14px;
@@ -86,6 +122,11 @@ $options: (
     &__callback {
         @include flex-all-sb;
         gap: 20px;
+
+        @include mobile {
+            padding-bottom: 40px;
+            border-bottom: 1px dashed var(--botticelli-color);
+        }
     }
 
     &__more {
@@ -113,12 +154,21 @@ $options: (
     padding: 38px 45px 38px 0;
     min-height: 175px;
 
+    @include mobile {
+        padding: 40px 16px 38px 0;
+    }
+
     h3 {
         @include EUSemiBold;
         font-size: 28px;
         line-height: 28px;
         color: #4274E9;
         margin: 0 0 10px;
+
+        @include mobile {
+            font-size: 22px;
+            line-height: 28px;
+        }
     }
 
     p {
@@ -127,6 +177,11 @@ $options: (
         line-height: 20px;
         margin: 0;
         color: var(--dark-color);
+
+        @include mobile {
+            font-size: 13px;
+            line-height: 17px;
+        }
     }
 }
 

@@ -136,6 +136,18 @@ new Swiper(".history-slider", {
     speed: 1500,
     spaceBetween: 16,
     breakpoints: {
+        319: {
+            slidesPerView: 1.05,
+        },
+        576: {
+            slidesPerView: 1.5,
+        },
+        767: {
+            slidesPerView: 2,
+        },
+        991: {
+            slidesPerView: 2.5,
+        },
         1440: {
             slidesPerView: 3,
         },

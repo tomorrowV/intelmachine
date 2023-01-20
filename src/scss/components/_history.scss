@@ -1,6 +1,10 @@
 .history {
     &__container {
         padding-bottom: 80px;
+
+        @include mobile {
+            padding-bottom: 40px;
+        }
     }
 
     &__head {
@@ -15,18 +19,30 @@
 .history-item {
     padding: 34px 32px 34px 30px;
     background-color: var(--porclain-color);
-    max-width: 491px;
     width: 100%;
+
+    @include mobile {
+        padding: 30px 20px 38px;
+    }
 
     h3 {
         @include EUSemiBold;
         font-size: 20px;
         line-height: 32px;
         margin: 0 0 20px;
+
+        @include mobile {
+            font-size: 16px;
+            line-height: 32px;
+        }
     }
 
     &__desc {
         margin-bottom: 20px;
+
+        @include mobile {
+            margin-bottom: 30px;
+        }
 
         p {
 
@@ -35,6 +51,11 @@
             color: #222222;
             font-size: 13px;
             line-height: 20px;
+
+            @include mobile {
+                font-size: 12px;
+                line-height: 22px;
+            }
         }
     }
 
@@ -44,5 +65,10 @@
         line-height: 20px;
         text-decoration: underline;
         color: var(--dark-color);
+
+        @include mobile {
+            font-size: 13px;
+            line-height: 17px;
+        }
     }
 }

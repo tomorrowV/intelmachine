@@ -71,6 +71,8 @@
 
         @include tablet {
             flex-direction: column;
+            gap: 20px;
+            background-color: transparent;
         }
     }
 
@@ -78,12 +80,15 @@
         flex-basis: 50%;
         flex-shrink: 0;
 
+        @include tablet {
+            background-color: var(--porclain-color);
+        }
+
         &:not(:last-child) {
             border-right: 1px dashed var(--botticelli-color);
 
             @include tablet {
                 border-right: 0;
-                border-bottom: 1px dashed var(--botticelli-color);
             }
         }
     }

@@ -3,6 +3,10 @@
 
     &__container {
         padding-bottom: 80px;
+
+        @include mobile {
+            padding-bottom: 40px;
+        }
     }
 
     &__head {
@@ -13,6 +17,11 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
         gap: 40px 16px;
+
+        @include mobile {
+            grid-template-columns: 1fr 1fr;
+            gap: 22px 8px;
+        }
     }
 }
 
@@ -30,11 +39,21 @@
         @include EUSemiBold;
         font-size: 14px;
         margin: 8px 0 4px;
+
+        @include mobile {
+            font-size: 13px;
+            line-height: 17px;
+        }
     }
 
     p {
         margin: 0;
         font-size: 13px;
         line-height: 19px;
+
+        @include mobile {
+            font-size: 12px;
+            line-height: 22px;
+        }
     }
 }
