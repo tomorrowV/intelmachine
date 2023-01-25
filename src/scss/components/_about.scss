@@ -18,10 +18,10 @@
     border-bottom: 1px dashed var(--botticelli-color);
 
     &__container {
-        padding: 60px 34px 30px;
+        padding: 60px 0 30px;
 
         @include desktop {
-            padding: 50px 20px 50px;
+            padding: 50px 0;
         }
     }
 
@@ -40,7 +40,9 @@
 
         @include tablet {
             flex-direction: column;
+            gap: 0;
         }
+
     }
 
     &__left {
@@ -81,6 +83,10 @@
     &__grid {
         border-bottom: 1px dashed var(--botticelli-color);
         margin-bottom: 40px;
+
+        @include tablet {
+            border-top: none;
+        }
     }
 
     &__card {
