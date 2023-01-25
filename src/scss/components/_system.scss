@@ -198,17 +198,11 @@
 }
 
 .system__accordion {
-    // position: absolute;
     width: 100%;
     height: 100px;
 
     &:nth-child(1) {
         background-color: #2252BF;
-
-        .accordion__label:after,
-        .accordion__label::before {
-            display: none;
-        }
     }
 
     &:nth-child(2) {
@@ -233,6 +227,12 @@
         .accordion__label>svg {
             fill: #2252BF;
         }
+
+        &:after,
+        &:before {
+            display: none;
+        }
+
     }
 
     &.active {
@@ -245,47 +245,55 @@
     transition: all 0.65s cubic-bezier(1, 0, 0.41, 1.01);
     cursor: pointer;
 
+    &:after {
+        content: '';
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 14px;
+        height: 2px;
+        background-color: var(--light-color);
+        position: absolute;
+        z-index: 3;
+    }
+
+    &:before {
+        content: '';
+        bottom: -6px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 2px;
+        height: 14px;
+        background-color: var(--light-color);
+        position: absolute;
+        z-index: 2;
+        transition: opacity .25s ease-in-out;
+    }
+
     &__label {
         user-select: none;
         cursor: none;
         pointer-events: none;
         position: absolute;
         top: -70px;
-        left: 50%;
-
-        svg {
-            transform: rotate(270deg);
-        }
-
-        &:after {
-            content: '';
-            top: 46%;
-            left: 8px;
-            width: 14px;
-            height: 2px;
-            background-color: var(--light-color);
-            position: absolute;
-        }
-
-        &:before {
-            content: '';
-            top: 42%;
-            left: 14px;
-            width: 2px;
-            height: 14px;
-            background-color: var(--light-color);
-            position: absolute;
-            z-index: 2;
-            transition: opacity .25s ease-in-out;
-        }
+        width: 100%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
 
         svg {
             pointer-events: none;
             user-select: none;
+            transform: rotate(270deg);
         }
+
     }
 
-    &.active &__label:before {
+    &.active:before {
         opacity: 0;
     }
 
@@ -300,6 +308,7 @@
         position: absolute;
         top: 60px;
         left: 50px;
+        right: 20px;
         transition: all 0.65s cubic-bezier(1, 0, 0.41, 1.01);
     }
 
