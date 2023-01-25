@@ -12,6 +12,9 @@
         display: flex;
         background-color: #F3F4F5;
 
+        @include tablet {
+            flex-direction: column;
+        }
     }
 
     &__left {
@@ -37,11 +40,23 @@
         @media screen and (min-width: 1600px) {
             flex-basis: 25%;
         }
+
+        @include desktop {
+            flex-basis: 400px;
+        }
+
+        @include tablet {
+            flex-basis: 535px;
+        }
     }
 
     &__cards {
         display: flex;
-        align-items: flex-start;
+
+        @include tablet {
+            border-bottom: 1px dashed var(--botticelli-color);
+            margin-bottom: 50px;
+        }
     }
 
     &__card {
@@ -52,6 +67,8 @@
         }
 
     }
+
+
 
     &__tooltip {
         &:nth-child(1) {
@@ -117,6 +134,10 @@
         visibility: hidden;
         transition: opacity .25s ease-in-out, visibility .25s ease-in-out;
 
+        @include desktop {
+            width: 350px;
+        }
+
         p {
             @include EUSemiBold;
             font-size: 15px;
@@ -140,6 +161,11 @@
         flex-shrink: 0;
         @include EUSemiBold;
         line-height: 0;
+
+        @include desktop {
+            width: 34px;
+            height: 34px;
+        }
     }
 
     &__more {
@@ -157,6 +183,11 @@
         background-color: var(--accent-color);
         @include flex-all-center;
         transition: background-color .25s ease-in-out;
+
+        @include desktop {
+            width: 34px;
+            height: 34px;
+        }
     }
 
     &:hover &__info {
@@ -174,6 +205,10 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    @include desktop {
+        padding: 45px 20px 40px;
+    }
 
     h3 {
         @include EUSemiBold;
@@ -237,6 +272,14 @@
 
     &.active {
         height: 470px;
+
+        @include desktop {
+            height: 350px;
+        }
+
+        @include tablet {
+            height: 370px;
+        }
     }
 }
 
@@ -331,5 +374,11 @@
         color: var(--light-color);
         max-width: 300px;
         user-select: none;
+
+        @include tablet {
+            font-size: 13px;
+            line-height: 17px;
+            max-width: 100%;
+        }
     }
 }

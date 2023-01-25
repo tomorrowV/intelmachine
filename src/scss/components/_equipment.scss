@@ -1,6 +1,10 @@
 .equipment {
     &__container {
         padding: 115px 0 100px;
+
+        @include tablet {
+            padding: 100px 0 40px;
+        }
     }
 
     &__head {
