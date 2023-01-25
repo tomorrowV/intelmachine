@@ -229,3 +229,13 @@
         }
     }
 }
+
+.configurations-open {
+    @include small-tablet {
+        margin-top: 70px;
+    }
+
+    .open__left {
+        border-top: 0;
+    }
+}

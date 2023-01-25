@@ -1,11 +1,29 @@
 .standart {
     &__container {
         display: flex;
+
+        @include tablet {
+            flex-direction: column;
+        }
     }
 
     &__video {
         flex-basis: 50%;
         flex-grow: 1;
+
+        @include desktop {
+            height: 600px;
+        }
+
+        @include tablet {
+            order: 1;
+            flex-basis: auto;
+            height: 350px;
+        }
+
+        @include mobile {
+            height: 250px;
+        }
 
         img,
         video,
@@ -23,6 +41,11 @@
         flex-direction: column;
         padding: 50px 50px 50px 41px;
         height: 100%;
+
+        @include tablet {
+            padding: 0 20px 40px;
+            border-top: none;
+        }
 
         h2 {
             max-width: 500px;
@@ -43,6 +66,10 @@
     &__content {
         padding-left: 10px;
         margin: 200px 0 0;
+
+        @include tablet {
+            margin: 80px 0 0;
+        }
 
         li {
             @include EUSemiBold;

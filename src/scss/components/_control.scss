@@ -1,6 +1,10 @@
 .control {
     &__container {
         display: flex;
+
+        @include tablet {
+            flex-direction: column;
+        }
     }
 
     &__left,
@@ -11,11 +15,23 @@
     &__left {
         padding: 80px 47px 34px 34px;
         border-right: 1px dashed var(--botticelli-color);
+
+        @include desktop {
+            padding: 60px 20px 34px;
+        }
+
+        @include small-tablet {
+            padding-top: 0;
+        }
     }
 
     &__content {
         display: flex;
         flex-wrap: wrap;
+
+        @include tablet {
+            border-top: 1px dashed var(--botticelli-color);
+        }
     }
 
     &__item {
@@ -29,16 +45,25 @@
 }
 
 .control-item {
-    padding: 50px 48px 50px 22px;
+    padding: 50px 48px 50px 20px;
     position: relative;
     cursor: pointer;
     min-height: 240px;
+
+    @include small-tablet {
+        padding: 45px 16px 35px 20px;
+        min-height: auto;
+    }
 
     &__label {
         height: 3px;
         width: 18px;
         background-color: var(--dark-color);
         margin-bottom: 60px;
+
+        @include small-tablet {
+            display: none;
+        }
     }
 
     &__image {
@@ -68,5 +93,10 @@
         font-size: 16px;
         line-height: 20px;
         color: var(--dark-color);
+
+        @include small-tablet {
+            font-size: 13px;
+            line-height: 17px;
+        }
     }
 }

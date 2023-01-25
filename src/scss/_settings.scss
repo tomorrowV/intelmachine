@@ -155,6 +155,11 @@ p {
   line-height: 22px;
   color: var(--pale-color);
   margin: 0;
+
+  @include small-tablet {
+    font-size: 13px;
+    line-height: 17px;
+  }
 }
 
 h1 {

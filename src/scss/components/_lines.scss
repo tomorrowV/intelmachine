@@ -57,6 +57,10 @@
     &__item {
         padding: 45px 24px 37px 34px;
 
+        @include desktop {
+            padding: 40px 20px 34px;
+        }
+
         @include tablet {
             border-bottom: 1px dashed var(--botticelli-color);
         }
