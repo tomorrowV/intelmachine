@@ -30,8 +30,8 @@
 // });
 
 // Подключение свайпера
-import Swiper, { Navigation, Pagination } from "swiper";
-Swiper.use([Navigation, Pagination]);
+import Swiper, { Navigation, Pagination, EffectCoverflow } from "swiper";
+Swiper.use([Navigation, Pagination, EffectCoverflow]);
 new Swiper(".articles-slider", {
     slidesPerView: 3,
     spaceBetween: 16,
@@ -69,6 +69,15 @@ new Swiper(".watch-slider", {
     freeMode: false,
     speed: 1500,
     breakpoints: {
+        319: {
+            slidesPerView: 1.1,
+        },
+        525: {
+            slidesPerView: 1.5,
+        },
+        767: {
+            slidesPerView: 2,
+        },
         991: {
             slidesPerView: 3.5,
         },
@@ -120,6 +129,7 @@ new Swiper(".projects-card__slider", {
     nested: true,
     slidesPerView: 1,
     speed: 1500,
+    effect: "coverflow",
     pagination: {
         el: ".swiper-pagination",
         type: "bullets",
@@ -163,6 +173,7 @@ new Swiper(".module-item-slider", {
     nested: true,
     slidesPerView: 1,
     speed: 1500,
+    effect: "coverflow",
     pagination: {
         el: ".swiper-pagination",
         type: "bullets",
@@ -177,7 +188,7 @@ new Swiper(".module-item-slider", {
 new Swiper(".branch-slider", {
     slidesPerView: 1,
     speed: 1500,
-
+    effect: "coverflow",
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",

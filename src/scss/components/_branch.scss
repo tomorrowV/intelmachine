@@ -8,6 +8,10 @@
         gap: 20px;
         margin-bottom: 50px;
 
+        @include desktop {
+            flex-direction: column;
+        }
+
         h1,
         p {
             margin: 0;
@@ -17,6 +21,10 @@
             font-size: 13px;
             line-height: 22px;
             max-width: 412px;
+
+            @include desktop {
+                max-width: 100%;
+            }
         }
     }
 
@@ -45,6 +53,10 @@
         width: 100%;
         height: 440px;
         position: relative;
+
+        @include tablet {
+            height: 300px;
+        }
 
         &:after {
             content: '';
@@ -99,6 +111,24 @@
 
     &:not(:last-child) {
         border-right: 1px dashed var(--botticelli-color);
+
+        @include tablet {
+            border-right: 0;
+        }
+    }
+
+    @include tablet {
+        min-height: 300px;
+        border-top: 1px dashed var(--botticelli-color);
+
+        &:nth-child(2n - 1) {
+            border-right: 1px dashed var(--botticelli-color);
+        }
+
+        &:nth-child(1),
+        &:nth-child(2) {
+            border-top: none;
+        }
     }
 
     .top {
@@ -127,7 +157,7 @@ $options: (
     itemsClass: "branch-top-item",
     desktopGap: 30px,
     desktopElems: 3,
-    tablet: "1024px",
+    tablet: "1020px",
     tabletElems: 2,
     tabletGap: 30px,
     mobile: "600px",
@@ -143,9 +173,9 @@ $options2: (
     itemsClass: "branch-bottom__item",
     desktopGap: 0px,
     desktopElems: 4,
-    tablet: "1024px",
+    tablet: "1020px",
     tabletElems: 2,
-    tabletGap: 30px,
+    tabletGap: 0px,
     mobile: "600px",
     mobileElems: 1,
     mobileGap: 20px
@@ -169,6 +199,10 @@ $options2: (
             margin: 0;
             padding: 60px 10px 60px 34px;
             max-width: 40vw;
+
+            @include tablet {
+                max-width: 100%;
+            }
 
             span {
                 color: var(--blue-color);
@@ -263,12 +297,17 @@ $options2: (
     }
 
     &__download {
+        flex-shrink: 0;
         flex-basis: 50%;
         padding: 34px 65px 33px 34px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         border-bottom: 1px dashed var(--botticelli-color);
+
+        @include tablet {
+            border-bottom: none;
+        }
 
         svg {
             margin-left: auto;
@@ -287,6 +326,10 @@ $options2: (
         flex-basis: 50%;
         background-color: var(--blue-color);
         color: var(--light-color);
-        padding: 175px 34px 33px;
+        padding: 175px 30px 33px;
+
+        @include tablet {
+            display: none;
+        }
     }
 }
