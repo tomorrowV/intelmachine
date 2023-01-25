@@ -3,7 +3,7 @@ $options: (
     itemsClass: "hero__card",
     desktopGap: 1px,
     desktopElems: 4,
-    tablet: "1180px",
+    tablet: "1020px",
     tabletElems: 2,
     tabletGap: 30px,
     mobile: "600px",
@@ -29,9 +29,19 @@ $options: (
     }
 
     &__side {
-        // flex-basis: 335px;
-        flex-basis: 25%;
+        flex-basis: 317px;
         padding: 14px 40px 40px;
+
+        @media screen and (min-width: 1600px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        @include desktop {
+            padding: 14px 20px 20px;
+            flex-basis: 250px;
+        }
     }
 
     &__logo {
@@ -101,6 +111,11 @@ $options: (
     @include flex-v-center;
     gap: 24px;
 
+    @include desktop {
+        padding-left: 20px;
+        padding-top: 30px;
+    }
+
     &__link {
         @include EURegular;
         font-size: 10px;
@@ -123,6 +138,10 @@ $options: (
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media screen and (min-width: 1600px) {
+        min-height: 900px;
+    }
 
     &__video {
         position: absolute;
@@ -156,16 +175,17 @@ $options: (
         z-index: 2;
         padding: 0 34px 40px;
 
+        @include desktop {
+            padding: 0 20px 20px;
+        }
 
         h1 {
             @include EUSemiBold;
-            margin: 0 0 17px 0;
+            margin: 0 0 50px 0;
             font-size: 44px;
             line-height: 48px;
             letter-spacing: -0.02em;
             color: var(--light-color);
-            padding-bottom: 40px;
-            border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
 
             span {
                 background-color: var(--blue-color);
@@ -177,6 +197,8 @@ $options: (
         .bottom {
             @include flex-v-center;
             gap: 20px;
+            padding-top: 17px;
+            border-top: 1px dashed rgba(255, 255, 255, 0.3);
 
             p {
                 margin: 0;

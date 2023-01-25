@@ -94,3 +94,13 @@ if (modalTriggers && modals) {
         });
     });
 }
+
+const accordions = document.querySelectorAll(".system__accordion");
+if (accordions) {
+    accordions.forEach((acc) => {
+        acc.addEventListener("click", () => {
+            accordions.forEach((acc) => acc.classList.remove("active"));
+            acc.classList.add("active");
+        });
+    });
+}
