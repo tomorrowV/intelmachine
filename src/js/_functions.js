@@ -183,3 +183,13 @@ if (systemTipTrigger) {
         });
     });
 }
+
+const accTooltipTriggers = document.querySelectorAll(".panel .tooltip");
+const accordionsTooptips = document.querySelectorAll(".tooltip__content");
+if (accTooltipTriggers && accordionsTooptips) {
+    accTooltipTriggers.forEach((trigger, index) => {
+        createPopper(trigger, accordionsTooptips[index], {
+            placement: "bottom-end",
+        });
+    });
+}

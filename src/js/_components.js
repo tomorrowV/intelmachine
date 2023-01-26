@@ -99,6 +99,7 @@ const accordions = document.querySelectorAll(".system__accordion");
 if (accordions) {
     accordions.forEach((acc) => {
         acc.addEventListener("click", () => {
+            if (acc.classList.contains("active")) return;
             accordions.forEach((acc) => acc.classList.remove("active"));
             acc.classList.add("active");
         });
