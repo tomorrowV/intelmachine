@@ -2,6 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+
 }
 
 .page {
@@ -35,6 +36,7 @@ a {
 
 .site-container {
   overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+  overscroll-behavior: contain;
 
   &.visible {
     overflow: visible;

@@ -13,8 +13,8 @@
 
     &__items {
         display: flex;
-        border-top: 1px dashed var(--botticelli-color);
-        border-bottom: 1px dashed var(--botticelli-color);
+        border-top: 1px solid var(--botticelli-color);
+        border-bottom: 1px solid var(--botticelli-color);
 
         @include small-tablet {
             flex-direction: column;
@@ -149,12 +149,15 @@
         max-width: 442px;
         font-size: 14px;
         line-height: 22px;
+        line-height: 150%;
         margin: 0 0 24px;
 
         @include small-tablet {
             color: var(--light-color);
             margin: 0 0 40px;
         }
+
+
     }
 
     &__image {

@@ -62,6 +62,10 @@
 
             span {
                 color: var(--blue-color);
+
+                @include mobile {
+                    color: inherit;
+                }
             }
         }
     }
