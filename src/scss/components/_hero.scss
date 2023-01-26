@@ -59,6 +59,13 @@ $options: (
         color: var(--manatee-color);
     }
 
+    &__container-bottom {
+        @include tablet {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
     &__card {
         padding: 47px 15px 61px;
         display: flex;
@@ -66,6 +73,11 @@ $options: (
 
         @include tablet {
             padding: 30px 20px 40px;
+            width: 100%;
+        }
+
+        @include small-tablet {
+            padding-bottom: 30px;
         }
 
         &:nth-child(1) {
@@ -86,8 +98,8 @@ $options: (
 
         @include tablet {
 
-            &:nth-child(3n - 1),
-            &:nth-child(3n - 2) {
+            &:nth-child(1),
+            &:nth-child(2) {
                 border-bottom: 1px dashed var(--botticelli-color);
             }
 
@@ -121,6 +133,11 @@ $options: (
             font-size: 17px;
             line-height: 22px;
             max-width: 260px;
+
+            @include small-tablet {
+                font-size: 15px;
+                line-height: 18px;
+            }
         }
 
         p {
@@ -128,6 +145,11 @@ $options: (
             font-size: 13px;
             line-height: 20px;
             color: #6F757C;
+
+            @include small-tablet {
+                font-size: 12px;
+                line-height: 18px;
+            }
         }
     }
 }
@@ -190,6 +212,10 @@ $options: (
             order: 1;
         }
 
+        @include small-tablet {
+            height: 387px;
+        }
+
         &:after {
             content: '';
             top: 0;
@@ -227,6 +253,9 @@ $options: (
             padding-top: 200px;
         }
 
+        @include small-tablet {
+            padding-top: 80px;
+        }
 
         h1 {
             @include EUSemiBold;
@@ -238,6 +267,15 @@ $options: (
 
             @include tablet {
                 margin: 0 0 20px;
+            }
+
+            @include small-tablet {
+                font-size: 31px;
+                line-height: 34px;
+
+                br {
+                    display: none;
+                }
             }
 
             span {
@@ -272,6 +310,14 @@ $options: (
                 color: var(--light-color);
                 opacity: 0.9;
                 max-width: 500px;
+
+                @include small-tablet {
+                    max-width: 100%;
+                    font-size: 11px;
+                    line-height: 17px;
+
+                    color: #CEDFF9;
+                }
             }
 
             &__buttons {
@@ -279,12 +325,21 @@ $options: (
                     display: flex;
                     gap: 20px;
                 }
+
+                @include small-tablet {
+                    gap: 5px;
+                }
             }
         }
     }
 
     &__presentation {
         min-width: 263px;
+
+        @include small-tablet {
+            min-width: auto;
+            font-size: 10px;
+        }
     }
 
     &__consultations {
@@ -293,6 +348,11 @@ $options: (
         @include tablet {
             min-width: 263px;
             display: inline-flex;
+        }
+
+        @include small-tablet {
+            min-width: auto;
+            font-size: 10px;
         }
     }
 }

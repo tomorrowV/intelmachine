@@ -17,6 +17,10 @@
     background-color: var(--athens-color);
     border-bottom: 1px dashed var(--botticelli-color);
 
+    @include mobile {
+        border-bottom: none;
+    }
+
     &__container {
         padding: 60px 0 30px;
 

@@ -8,9 +8,6 @@
     transition: box-shadow .25s ease-in-out, transform .25s ease-in-out;
     border-bottom: 1px dashed var(--botticelli-color);
 
-    @include tablet {
-        border-top: 1px dashed var(--botticelli-color);
-    }
 
     &.main-page {
         transform: translateY(-100px);
@@ -195,6 +192,32 @@
                 border-left: 1px dashed var(--botticelli-color);
                 border-right: 1px dashed var(--botticelli-color);
             }
+        }
+    }
+
+    &__whatsapp svg {
+        path:nth-child(1) {
+            fill: #2CB742;
+
+            @include tablet {
+                fill: var(--light-color);
+            }
+        }
+
+        path:nth-child(2) {
+            fill: var(--light-color);
+
+            @include tablet {
+                fill: var(--blue-color);
+            }
+        }
+    }
+
+    &__telegram svg {
+        fill: #2DA3DB;
+
+        @include tablet {
+            fill: var(--light-color);
         }
     }
 }
