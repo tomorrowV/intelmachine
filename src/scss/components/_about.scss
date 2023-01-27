@@ -55,6 +55,10 @@
 
         @include tablet {
             flex-basis: auto;
+
+            &.mobile {
+                display: none;
+            }
         }
     }
 
@@ -209,6 +213,8 @@
     }
 
     &__banner {
+        display: flex;
+
         @media screen and (min-width: 1441px) {
             height: 500px;
         }

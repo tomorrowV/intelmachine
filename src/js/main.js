@@ -16,19 +16,25 @@ function searchBorder() {
             borderVericalAttr !== null ? borderVericalAttr : false;
         if (border.style.display !== "none") {
             if (borderHorizonId) {
+                const borderClient = border.getBoundingClientRect();
                 const bWidth = Math.round(border.getBoundingClientRect().width);
+                const borderWidth =
+                    window.getComputedStyle(border).borderBottomWidth;
+                const borderColor =
+                    window.getComputedStyle(border).borderBottomColor;
+
                 border.setAttribute("border-width", bWidth);
                 const span = document.getElementById(borderHorizonId);
                 span.style.cssText = `
-                    left: ${span.offsetLeft};
-                    top: ${
-                        span.style.borderTopStyle === "solid"
-                            ? span.offsetLeft
-                            : span.offsetTop +
-                              span.getBoundingClientRect().height -
-                              1
-                    };
-                    width: ${span.getBoundingClientRect().width}
+                        opacity: 1;
+                        position: absolute;
+                        left: borderClient.left;
+                        top: ${border.offsetTop - 1 + borderClient.height}px;
+                        width: ${borderClient.width}px;
+                        height: ${borderWidth};
+                        background-color:
+                            red;
+
                 `;
             }
         }
@@ -40,30 +46,6 @@ function searchBorder() {
 // animation on scroll
 
 gsap.registerPlugin(ScrollTrigger);
-
-let revealContainers = document.querySelectorAll(".reveal");
-
-// revealContainers.forEach((container) => {
-//     let image = container.querySelector(".reveal-image");
-
-//     let tl = gsap.timeline({
-//         scrollTrigger: {
-//             trigger: container,
-//             toggleActions: "restart none none reset",
-//         },
-//     });
-
-//     tl.set(container, { autoAlpha: 1, duration: 2 });
-//     tl.from(container, 1, {
-//         xPercent: image.classList.contains("reveal-image-left") ? -100 : 100,
-//         ease: Power4.inOut,
-//     });
-//     tl.from(image, 1, {
-//         xPercent: image.classList.contains("reveal-image-left") ? 100 : -100,
-
-//         ease: Power4.inOut,
-//     });
-// });
 
 const tlChoose = gsap.timeline();
 
@@ -93,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     entry.target.classList.remove("animation-block");
                     entry.target.removeAttribute("data-duration");
                     entry.target.removeAttribute("data-delay");
-                }, 3000);
+                }, 2000);
             }
         });
     };

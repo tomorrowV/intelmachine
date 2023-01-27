@@ -2,13 +2,20 @@
 // Рекомендуется создавать отдельный файл в папке components и подключать все там
 
 // Подключение свайпера
-import Swiper, { Navigation, Pagination, EffectCoverflow } from "swiper";
-Swiper.use([Navigation, Pagination, EffectCoverflow]);
+import Swiper, {
+    Navigation,
+    Pagination,
+    EffectCoverflow,
+    Autoplay,
+} from "swiper";
+Swiper.use([Navigation, Pagination, EffectCoverflow, Autoplay]);
 new Swiper(".articles-slider", {
     slidesPerView: 3,
     spaceBetween: 16,
     freeMode: false,
     speed: 1500,
+    loop: true,
+    autoplay: true,
     breakpoints: {
         319: {
             slidesPerView: 1.1,
@@ -73,6 +80,8 @@ new Swiper(".projects-section-slider", {
     spaceBetween: 16,
     freeMode: false,
     speed: 1500,
+    autoplay: true,
+    loop: true,
     breakpoints: {
         319: {
             slidesPerView: 1,

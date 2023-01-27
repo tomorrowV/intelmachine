@@ -4,8 +4,16 @@
     @include flex-v-center;
     margin-bottom: 130px;
 
+    @media screen and (max-width: 1400px) {
+        margin-bottom: 40px;
+    }
+
     @include desktop {
         margin-bottom: 80px;
+    }
+
+    @include small-tablet {
+        margin-bottom: 30px;
     }
 
     li {

@@ -21,6 +21,10 @@
 
 .main.offset {
   padding-top: 90px;
+
+  @include small-tablet {
+    padding-top: 70px;
+  }
 }
 
 img {
