@@ -42,6 +42,7 @@
         clip-path: inset(0 0 0 100%);
     }
 
+
     &[data-duration="0.6"] {
         transition-duration: 0.86s !important;
     }
@@ -64,6 +65,10 @@
 
     &[data-duration="2"] {
         transition-duration: 2s !important;
+    }
+
+    &[data-duration="2.2"] {
+        transition-duration: 2.2s !important;
     }
 
     &[data-delay="0.6"] {

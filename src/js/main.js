@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     entry.target.classList.remove("animation-block");
                     entry.target.removeAttribute("data-duration");
                     entry.target.removeAttribute("data-delay");
-                }, 2000);
+                }, 3000);
             }
         });
     };
