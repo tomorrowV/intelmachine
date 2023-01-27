@@ -102,7 +102,7 @@ p {
   font-size: 13px;
   line-height: 22px;
   border-radius: var(--radius);
-  transition: background-color .25s ease-in-out;
+  transition: all .5s ease-in-out;
 
   @include mobile {
     padding: 11px;

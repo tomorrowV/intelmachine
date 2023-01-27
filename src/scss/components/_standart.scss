@@ -10,6 +10,7 @@
     &__video {
         flex-basis: 50%;
         flex-grow: 1;
+        height: auto;
 
         @include desktop {
             height: 600px;

@@ -1,14 +1,17 @@
-<section class="hero">
+<section class="hero block-animation">
     <div class="hero__top">
         <div class="hero-main hero__main">
             <ul class="hero-nav list-reset">
-                <li><a href="" class="hero-nav__link">О нас</a></li>
-                <li><a href="" class="hero-nav__link">Блог</a></li>
-                <li><a href="" class="hero-nav__link">Прозводственные линии</a></li>
-                <li><a href="" class="hero-nav__link">Модули и участки линий</a></li>
-                <li><a href="" class="hero-nav__link">Наши проекты</a></li>
-                <li><a href="" class="hero-nav__link">Оплата и доствка</a></li>
-                <li><a href="" class="hero-nav__link">Контакты</a></li>
+                <li><a href="" class="hero-nav__link animation-block">О нас</a></li>
+                <li><a href="" class="hero-nav__link animation-block">Блог</a></li>
+                <li><a href="" class="hero-nav__link animation-block">Прозводственные
+                        линии</a></li>
+                <li><a href="" class="hero-nav__link animation-block">Модули и участки
+                        линий</a></li>
+                <li><a href="" class="hero-nav__link animation-block">Наши проекты</a></li>
+                <li><a href="" class="hero-nav__link animation-block">Оплата и доствка</a>
+                </li>
+                <li><a href="" class="hero-nav__link animation-block">Контакты</a></li>
             </ul>
             <div class="hero-main__video">
                 <picture>
@@ -17,18 +20,22 @@
                 </picture>
             </div>
             <div class="hero-main__content">
-                <h1>Автоматизированные <span>линии</span><br />
+                <h1 class="hero-main__content-title animation-block" data-delay="0.6">Автоматизированные
+                    <span>линии</span><br />
                     для неприрывного <span>производства</span><br />
                     сэндвич-панелей
                 </h1>
                 <div class="bottom">
                     <div class="bottom__buttons">
-                        <button class="hero-main__presentation btn-secondary btn-reset">Смотреть
+                        <button class="hero-main__presentation animation-block btn-secondary btn-reset"
+                            data-delay="0.7">Смотреть
                             видеопрезентацию</button>
-                        <button class="hero-main__consultations btn-primary btn-reset">Получить консультацию
+                        <button class="hero-main__consultations animation-block btn-primary btn-reset"
+                            data-delay="0.8">Получить консультацию
                         </button>
                     </div>
-                    <p>Единственный производитель автоматизированных линий для изготовления
+                    <p class="animation-block" data-delay="0.8">Единственный производитель автоматизированных
+                        линий для изготовления
                         сэндвич-панелей в России</p>
                 </div>
             </div>
@@ -36,49 +43,52 @@
         <div class="hero-side hero__side">
             <div class="hero-side__top">
                 <a href="main.html" class="hero__logo">
-                    <img src="img/logo.svg" alt="Логотип">
+                    @include('./UI/logo.html')
                 </a>
-                <div class="hero-side__item item-top">
-                    <p class="hero__after-logo">Российский производитель линий
+                <div class="hero-side__item item-top" data-delay="0.7">
+                    <p class="hero__after-logo animation-block">Российский производитель линий
                         для изготовления сэндвич-панелей
                     </p>
                 </div>
-                <div class="hero-side__item item-top">
-                    <a class="hero-side__phone" href="tel:+88003010799">
+                <div class="hero-side__item item-top" data-delay="0.8">
+                    <a class="hero-side__phone animation-block" href="tel:+88003010799">
                         <img src="img/icons/phone.svg" alt="">
                         <span>8 (800) 301 07 99</span>
                     </a>
                 </div>
-                <div class="hero-side__order hero-side__item item-top">
+                <div class="hero-side__order hero-side__item item-top animation-block">
                     <div class="left">
                         <a href=""><img src="img/icons/whatsapp.svg" alt=""></a>
                         <a href=""><img src="img/icons/telegram.svg" alt=""></a>
                     </div>
-                    <button data-modal="modal-order" class="hero-side__order-call btn-reset" href="">Заказать
+                    <button data-modal="modal-order" class="hero-side__order-call animation-block btn-reset"
+                        href="">Заказать
                         звонок</button>
                 </div>
             </div>
             <div class="hero-side__bottom">
                 <ul class="list-reset">
-                    <li>Возможность установки в<br /> помещениях площадью<br />
+                    <li class="animation-block" data-delay="1">Возможность установки в<br /> помещениях площадью<br />
                         от 1 000 кв.м.
                     </li>
-                    <li>Высокая производительность<br /> линии: до 8 п.м./мин.
+                    <li class="animation-block" data-delay="1">Высокая производительность<br /> линии: до 8 п.м./мин.
                     </li>
-                    <li>Рабочая смена:<br />
+                    <li class="animation-block" data-delay="1">Рабочая смена:<br />
                         от 3х человек
                     </li>
                 </ul>
-                <button data-modal="modal-consultation" class="hero-side__consultation btn-primary btn-reset">Получить
+                <button data-modal="modal-consultation"
+                    class="hero-side__consultation animation-block btn-primary btn-reset animation-block"
+                    data-delay="1">Получить
                     консультацию
                 </button>
             </div>
         </div>
     </div>
-    <div class="hero__container-bottom">
+    <div class="hero__container-bottom block-animation">
         <div class="hero__card">
-            <div class="label"></div>
-            <div class="content">
+            <div class="label animation-block"></div>
+            <div class="content animation-block">
                 <h3>Индивидуальное производство</h3>
                 <p>Разработаем. создадим и введем в эксплуатацию оборудование под ваши задачи, технические
                     возможности и
@@ -87,8 +97,8 @@
             </div>
         </div>
         <div class="hero__card">
-            <div class="label"></div>
-            <div class="content">
+            <div class="label animation-block"></div>
+            <div class="content animation-block">
                 <h3>Гарантийное
                     и постгарантийное обслуживание
                 </h3>
@@ -99,8 +109,8 @@
             </div>
         </div>
         <div class="hero__card">
-            <div class="label"></div>
-            <div class="content">
+            <div class="label animation-block"></div>
+            <div class="content animation-block">
                 <h3>Интеграция в действующие линии
                 </h3>
                 <p>Интегрируем модули сиситемы
@@ -108,8 +118,8 @@
             </div>
         </div>
         <div class="hero__card">
-            <div class="label"></div>
-            <div class="content">
+            <div class="label animation-block"></div>
+            <div class="content animation-block">
                 <h3>Минимальные вложения
                     и быстрая окупаемость
                 </h3>
