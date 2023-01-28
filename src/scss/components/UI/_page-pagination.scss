@@ -16,6 +16,7 @@
         line-height: 22px;
         @include EUSemiBold;
         cursor: pointer;
+        transition: background-color .5s ease-in-out, color .5s ease-in-out;
 
         @include mobile {
             width: 30px;
@@ -27,6 +28,10 @@
         &.present {
             color: var(--light-color);
             background-color: var(--accent-color);
+        }
+
+        &:not(.present):hover {
+            background-color: darken(#F3F4F5, 10%);
         }
     }
 }

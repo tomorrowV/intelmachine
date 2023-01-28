@@ -165,6 +165,15 @@
     &__links {
         @include flex-v-center;
         gap: 10px;
+
+        a {
+            display: flex;
+            transition: transform .5s ease-in-out;
+
+            &:hover {
+                transform: translateY(-2px);
+            }
+        }
     }
 }
 

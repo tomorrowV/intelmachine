@@ -144,6 +144,26 @@
         a {
             @include EUSemiBold;
             font-size: 14px;
+            position: relative;
+
+            &:after {
+                content: "";
+                background-color: var(--dark-color);
+                border-radius: 8px;
+                bottom: 2px;
+                height: 0.5px;
+                left: 0;
+                position: absolute;
+                transform: scaleX(0);
+                transform-origin: right;
+                transition: transform .25s ease-in-out;
+                width: 100%;
+            }
+
+            &:hover:after {
+                transform: scaleX(1);
+                transform-origin: left;
+            }
 
             @include tablet {
                 font-size: 22px;
@@ -154,8 +174,29 @@
 
         button {
             font-size: 11px;
-            text-decoration: underline;
+
             color: #4A494A;
+            position: relative;
+
+            &:after {
+                content: "";
+                background-color: #4A494A;
+                border-radius: 8px;
+                bottom: 0px;
+                height: 1px;
+                left: 0;
+                position: absolute;
+                transform: scaleX(0);
+                transform-origin: right;
+                transition: transform .5s ease-in-out;
+                width: 100%;
+            }
+
+
+            &:hover:after {
+                transform: scaleX(1);
+                transform-origin: left;
+            }
 
             @include tablet {
                 display: none;
@@ -196,6 +237,12 @@
     }
 
     &__whatsapp svg {
+        transition: transform .5s ease-in-out;
+
+        &:hover {
+            transform: translateY(-2px);
+        }
+
         path:nth-child(1) {
             fill: #2CB742;
 
@@ -214,6 +261,12 @@
     }
 
     &__telegram svg {
+        transition: transform .5s ease-in-out;
+
+        &:hover {
+            transform: translateY(-2px);
+        }
+
         fill: #2DA3DB;
 
         @include tablet {

@@ -432,11 +432,31 @@ $options2: (
         }
 
         a {
+            width: max-content;
             @include EUSemiBold;
             font-size: 18px;
             line-height: 22px;
             color: var(--blue-color);
-            text-decoration: underline;
+            position: relative;
+
+            &:after {
+                content: "";
+                background-color: var(--blue-color);
+                border-radius: 8px;
+                bottom: -2px;
+                height: 1px;
+                left: 0;
+                position: absolute;
+                transform: scaleX(0);
+                transform-origin: right;
+                transition: transform .25s ease-in-out;
+                width: 100%;
+            }
+
+            &:hover:after {
+                transform: scaleX(1);
+                transform-origin: left;
+            }
 
             @include mobile {
                 font-size: 15px;

@@ -9,20 +9,20 @@
         @include('partials/header.html')
         <main class="main offset">
             <ul class="breadcrumbs fluid list-reset">
-                <li><a href="#">Главная</a></li>
+                <li><a href="main.html">Главная</a></li>
                 <li>Модуль профилирования кровельной обкладки</li>
             </ul>
             <section class="module" data-border border-horizon-id="23ec7a2269bcc">
                 <div class="module__container fluid">
-                    <div class="module__head">
+                    <div class="module__head animation-block">
                         <h1 class="module__title">Модуль профилирования кровельной обкладки</h1>
                         <p>Увеличенное количество клетей позволяет работать
                             с листовым металлом разного качества</p>
                     </div>
                     <div class="module__item module-item">
                         <div class="module__left">
-                            <h2 class="mudule-item__title">Характеристики</h2>
-                            <ul class="module-item__list list-reset">
+                            <h2 class="mudule-item__title animation-block">Характеристики</h2>
+                            <ul class="module-item__list list-reset animation-block">
                                 <li>Габаритная длина: 10 м</li>
                                 <li>Формирующие клети: 22</li>
                                 <li>Толщина листового металла: от 0,4 до 0,7 мм</li>
@@ -30,11 +30,13 @@
                                 <li>Нож отреза рулона</li>
                                 <li>Два рулона ламинирующей пленки</li>
                             </ul>
-                            <span class="module-item__advantages">Преимущество 1 по конкретному узлу</span>
-                            <span class="module-item__advantages">Преимущество 2 по конкретному узлу</span>
+                            <span class="module-item__advantages animation-block">Преимущество 1 по конкретному
+                                узлу</span>
+                            <span class="module-item__advantages animation-block">Преимущество 2 по конкретному
+                                узлу</span>
                         </div>
                         <div class="module__right">
-                            <div class="module-item-slider swiper">
+                            <div class="module-item-slider swiper animation-block from-right" data-delay="0.8">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <div class="module-item__image">
@@ -85,7 +87,7 @@
                                     </svg>
                                 </div>
                             </div>
-                            <div class="module__question">
+                            <div class="module__question animation-block">
                                 <button data-modal="modal-consultation" class="btn-primary btn-reset">Получить
                                     консультацию
                                 </button>
@@ -125,7 +127,7 @@
                 <div class="manager__container fluid">
                     <div class="manager__consultations">
                         <div class="left">
-                            <div class="open__bio mobile">
+                            <div class="open__bio mobile animation-block">
                                 <div class="open__avatar">
                                     <img src="img/avatar.webp" alt="Иванов Сергей">
                                 </div>
@@ -134,10 +136,10 @@
                                     «Интелмашин»</span>
                             </div>
                             <div class="contact-us">
-                                <button data-modal="modal-consultation"
+                                <button data-modal="modal-consultation animation-block"
                                     class="contact-us__button btn-primary btn-reset">Получить
                                     консультацию</button>
-                                <div class="contact-us__questions flex">
+                                <div class="contact-us__questions flex animation-block">
                                     <span>Задать вопрос
                                         в мессенджеры</span>
                                     <div class="contact-us__links">
@@ -165,7 +167,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="right">
+                        <div class="right animation-block">
                             <div class="open__bio desktop">
                                 <div class="open__avatar">
                                     <img src="img/avatar.webp" alt="Иванов Сергей">
@@ -181,13 +183,13 @@
             <section class="watch">
                 <div class="watch__container fluid">
                     <div class="watch__head">
-                        <h2 class="watch__title section-title">Посмотрите другие модули и участки линий
+                        <h2 class="watch__title section-title animation-block">Посмотрите другие модули и участки линий
                             по производству сэндвич-панелей</h2>
                     </div>
                     <div class="watch-slider swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="equipment-card">
+                                <div class="equipment-card animation-block">
                                     <div class="equipment-card__image">
                                         <picture>
                                             <source srcset="img/equipment/equipment-1.webp" type="image/webp">
@@ -202,7 +204,7 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="equipment-card">
+                                <div class="equipment-card animation-block">
                                     <div class="equipment-card__image">
                                         <picture>
                                             <source srcset="img/equipment/equipment-1.webp" type="image/webp">
@@ -217,7 +219,7 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="equipment-card">
+                                <div class="equipment-card animation-block">
                                     <div class="equipment-card__image">
                                         <picture>
                                             <source srcset="img/equipment/equipment-1.webp" type="image/webp">
@@ -232,127 +234,7 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="equipment-card">
-                                    <div class="equipment-card__image">
-                                        <picture>
-                                            <source srcset="img/equipment/equipment-1.webp" type="image/webp">
-                                            <img src="img/equipment/equipment-1.png" width="264" height="196">
-                                        </picture>
-                                    </div>
-                                    <div class="equipment-card__content">
-                                        <h3>Технологический комплекс подачи ламелей (ТКПЛ)</h3>
-                                        <p>Участок для автоматизированной подачи минеральной ваты</p>
-                                        <a href="" class="btn-primary">Подробнее</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="equipment-card">
-                                    <div class="equipment-card__image">
-                                        <picture>
-                                            <source srcset="img/equipment/equipment-1.webp" type="image/webp">
-                                            <img src="img/equipment/equipment-1.png" width="264" height="196">
-                                        </picture>
-                                    </div>
-                                    <div class="equipment-card__content">
-                                        <h3>Технологический комплекс подачи ламелей (ТКПЛ)</h3>
-                                        <p>Участок для автоматизированной подачи минеральной ваты</p>
-                                        <a href="" class="btn-primary">Подробнее</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="equipment-card">
-                                    <div class="equipment-card__image">
-                                        <picture>
-                                            <source srcset="img/equipment/equipment-1.webp" type="image/webp">
-                                            <img src="img/equipment/equipment-1.png" width="264" height="196">
-                                        </picture>
-                                    </div>
-                                    <div class="equipment-card__content">
-                                        <h3>Технологический комплекс подачи ламелей (ТКПЛ)</h3>
-                                        <p>Участок для автоматизированной подачи минеральной ваты</p>
-                                        <a href="" class="btn-primary">Подробнее</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="equipment-card">
-                                    <div class="equipment-card__image">
-                                        <picture>
-                                            <source srcset="img/equipment/equipment-1.webp" type="image/webp">
-                                            <img src="img/equipment/equipment-1.png" width="264" height="196">
-                                        </picture>
-                                    </div>
-                                    <div class="equipment-card__content">
-                                        <h3>Технологический комплекс подачи ламелей (ТКПЛ)</h3>
-                                        <p>Участок для автоматизированной подачи минеральной ваты</p>
-                                        <a href="" class="btn-primary">Подробнее</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="equipment-card">
-                                    <div class="equipment-card__image">
-                                        <picture>
-                                            <source srcset="img/equipment/equipment-1.webp" type="image/webp">
-                                            <img src="img/equipment/equipment-1.png" width="264" height="196">
-                                        </picture>
-                                    </div>
-                                    <div class="equipment-card__content">
-                                        <h3>Технологический комплекс подачи ламелей (ТКПЛ)</h3>
-                                        <p>Участок для автоматизированной подачи минеральной ваты</p>
-                                        <a href="" class="btn-primary">Подробнее</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="equipment-card">
-                                    <div class="equipment-card__image">
-                                        <picture>
-                                            <source srcset="img/equipment/equipment-1.webp" type="image/webp">
-                                            <img src="img/equipment/equipment-1.png" width="264" height="196">
-                                        </picture>
-                                    </div>
-                                    <div class="equipment-card__content">
-                                        <h3>Технологический комплекс подачи ламелей (ТКПЛ)</h3>
-                                        <p>Участок для автоматизированной подачи минеральной ваты</p>
-                                        <a href="" class="btn-primary">Подробнее</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="equipment-card">
-                                    <div class="equipment-card__image">
-                                        <picture>
-                                            <source srcset="img/equipment/equipment-1.webp" type="image/webp">
-                                            <img src="img/equipment/equipment-1.png" width="264" height="196">
-                                        </picture>
-                                    </div>
-                                    <div class="equipment-card__content">
-                                        <h3>Технологический комплекс подачи ламелей (ТКПЛ)</h3>
-                                        <p>Участок для автоматизированной подачи минеральной ваты</p>
-                                        <a href="" class="btn-primary">Подробнее</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="equipment-card">
-                                    <div class="equipment-card__image">
-                                        <picture>
-                                            <source srcset="img/equipment/equipment-1.webp" type="image/webp">
-                                            <img src="img/equipment/equipment-1.png" width="264" height="196">
-                                        </picture>
-                                    </div>
-                                    <div class="equipment-card__content">
-                                        <h3>Технологический комплекс подачи ламелей (ТКПЛ)</h3>
-                                        <p>Участок для автоматизированной подачи минеральной ваты</p>
-                                        <a href="" class="btn-primary">Подробнее</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="equipment-card">
+                                <div class="equipment-card animation-block">
                                     <div class="equipment-card__image">
                                         <picture>
                                             <source srcset="img/equipment/equipment-1.webp" type="image/webp">
@@ -375,28 +257,34 @@
             <section class="read-more">
                 <div class="read-more__container fluid">
                     <div class="read-more__item">
-                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                            printer
+                        <p class="animation-block" data-duration="1.3">Lorem Ipsum has been the industry's standard
+                            dummy text ever
+                            since the 1500s,
+                            when an unknown printer
                             took a
                             galley of type and scrambled it to make a type specimen book.
                             It has survived not only five centuries, but also the leap into electronic typesetting,
                             remaining</p>
                     </div>
                     <div class="read-more__item">
-                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                            printer
+                        <p class="animation-block" data-duration="1.3">Lorem Ipsum has been the industry's standard
+                            dummy text ever
+                            since the 1500s,
+                            when an unknown printer
                             took a
                             galley of type and scrambled it to make a type specimen book.
                             It has survived not only five centuries, but also the leap into electronic typesetting,
                             remaining</p>
-                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                            printer
+                        <p class="animation-block" data-duration="1.3">Lorem Ipsum has been the industry's standard
+                            dummy text ever
+                            since the 1500s,
+                            when an unknown printer
                             took a
                             galley of type and scrambled it to make a type specimen book.
                             It has survived not only five centuries, but also the leap into electronic typesetting,
                             remaining</p>
                     </div>
-                    <a href="" class="read-more__link">Читать далее</a>
+                    <a href="" class="read-more__link animation-block">Читать далее</a>
                 </div>
             </section>
         </main>

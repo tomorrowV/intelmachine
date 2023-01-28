@@ -242,5 +242,45 @@ h1 {
   &__links {
     @include flex-v-center;
     gap: 10px;
+
+    a {
+      display: flex;
+      transition: transform .5s ease-in-out;
+
+      &:hover {
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+
+
+.whatsapp-icon {
+  svg path:nth-child(1) {
+    fill: #BAC9CF;
+  }
+
+  svg path {
+    transition: fill .5s ease-in-out;
+  }
+
+  &:hover svg path:nth-child(1) {
+    fill: #2CB742;
+  }
+
+  svg path:nth-child(2) {
+    fill: var(--light-color);
+  }
+}
+
+.telegram-icon {
+  svg {
+    fill: #BAC9CF;
+    transition: fill .5s ease-in-out;
+  }
+
+  &:hover svg {
+    fill: #2DA3DB;
   }
 }

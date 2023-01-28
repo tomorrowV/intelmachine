@@ -4,6 +4,7 @@
         position: sticky;
         top: 0;
         overflow: auto;
+        z-index: 10;
     }
 
     &__tabs {
@@ -219,13 +220,33 @@
     &__download {
         @include flex-v-center;
         gap: 14px;
+        cursor: pointer;
 
         span {
             @include EUSemiBold;
             font-size: 13px;
             line-height: 32px;
-            text-decoration: underline;
             color: #2252BF;
+            position: relative;
+
+            &:after {
+                content: "";
+                background-color: #2252BF;
+                border-radius: 8px;
+                bottom: 2px;
+                height: 1px;
+                left: 0;
+                position: absolute;
+                transform: scaleX(0);
+                transform-origin: right;
+                transition: transform .25s ease-in-out;
+                width: 100%;
+            }
+
+            &:hover:after {
+                transform: scaleX(1);
+                transform-origin: left;
+            }
 
             @include tablet {
                 color: var(--light-color);

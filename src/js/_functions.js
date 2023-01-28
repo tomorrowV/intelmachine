@@ -44,6 +44,8 @@ new Swiper(".watch-slider", {
     spaceBetween: 16,
     freeMode: false,
     speed: 1500,
+    autoplay: true,
+    loop: true,
     breakpoints: {
         319: {
             slidesPerView: 1.1,
@@ -202,3 +204,6 @@ if (accTooltipTriggers && accordionsTooptips) {
         });
     });
 }
+
+import { Fancybox } from "@fancyapps/ui";
+Fancybox.bind("[data-fancybox]");
