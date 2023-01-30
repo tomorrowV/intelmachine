@@ -257,12 +257,15 @@ h1 {
 
 
 .whatsapp-icon {
-  svg path:nth-child(1) {
+  &>svg path:nth-child(1) {
     fill: #BAC9CF;
   }
 
-  svg path {
-    transition: fill .5s ease-in-out;
+  &>svg {
+    path {
+      transition: fill .5s ease-in-out;
+    }
+
   }
 
   &:hover svg path:nth-child(1) {

@@ -137,6 +137,14 @@
         @include desktop {
             min-width: 100%;
         }
+
+        @include mobile {
+            display: block;
+            min-width: auto;
+            width: 216px;
+            margin: 0 auto 50px;
+            height: 54px;
+        }
     }
 
     &__bio {

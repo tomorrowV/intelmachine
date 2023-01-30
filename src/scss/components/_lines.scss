@@ -13,8 +13,8 @@
 
     &__items {
         display: flex;
-        border-top: 1px solid var(--botticelli-color);
-        border-bottom: 1px solid var(--botticelli-color);
+        border-top: 1px dashed var(--botticelli-color);
+        border-bottom: 1px dashed var(--botticelli-color);
 
         @include small-tablet {
             flex-direction: column;

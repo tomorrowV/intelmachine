@@ -1,33 +1,29 @@
-.from-left {
-    transform-origin: left;
-    overflow: hidden;
-    // img {
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     width: 100%;
-    //     height: 100%;
-    //     object-fit: cover;
-    //     object-position: center;
+.btn-animation {
+    transition: all 1.5s ease-in-out !important;
+    opacity: 0;
 
-    // }
-}
+    &[data-delay="0.6"] {
+        transition-delay: 0.6s !important;
+    }
 
-.from-right {
-    transform-origin: right;
-    overflow: hidden;
-}
+    &[data-delay="0.7"] {
+        transition-delay: 0.7s !important;
+    }
 
+    &[data-delay="0.8"] {
+        transition-delay: 0.8s !important;
+    }
 
-.reveal {
-    overflow: hidden;
-    transform-origin: left;
-    position: relative;
-    height: 100%;
-    width: 100%;
+    &[data-delay="0.9"] {
+        transition-delay: 0.9s !important;
+    }
 
-    &-image {
-        height: 100%;
+    &[data-delay="1"] {
+        transition-delay: 1s !important;
+    }
+
+    &.animated {
+        opacity: 1;
     }
 }
 

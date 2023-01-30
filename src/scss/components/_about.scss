@@ -149,11 +149,17 @@
 
     &__more {
         min-width: 138px;
+
+        @include small-tablet {
+            min-width: 109px;
+        }
     }
 
     &__questions {
         @include flex-all-sb;
         gap: 30px;
+
+
 
         span {
             font-size: 14px;
@@ -172,6 +178,16 @@
 
             &:hover {
                 transform: translateY(-2px);
+            }
+
+            @include mobile {
+                width: 30px;
+                height: 30px;
+
+                svg {
+                    width: 100%;
+                    height: 100%;
+                }
             }
         }
     }

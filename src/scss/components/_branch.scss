@@ -18,6 +18,7 @@
         }
 
         p {
+            margin-top: 7px;
             font-size: 13px;
             line-height: 22px;
             max-width: 412px;
@@ -391,6 +392,10 @@ $options2: (
             min-width: 220px;
             align-items: center;
             gap: 20px;
+
+            @include mobile {
+                min-width: 172px;
+            }
         }
     }
 

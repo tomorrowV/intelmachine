@@ -16,6 +16,10 @@
         margin-bottom: 30px;
     }
 
+    @include mobile {
+        margin-bottom: 100px;
+    }
+
     li {
         font-size: 11px;
         line-height: 22px;

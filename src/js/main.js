@@ -66,7 +66,10 @@ gsap.from(".hero-main__video", {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    const animations = document.querySelectorAll(".animation-block");
+    const animations = [
+        ...document.querySelectorAll(".animation-block"),
+        ...document.querySelectorAll(".btn-animation"),
+    ];
     const callback = (entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {

@@ -277,14 +277,14 @@ $options: (
         }
 
         @include small-tablet {
-            padding-top: 80px;
+            padding-top: 160px;
         }
 
         h1 {
             @include EUSemiBold;
             margin: 0 0 50px 0;
             font-size: 44px;
-            line-height: 48px;
+            line-height: 50px;
             letter-spacing: -0.02em;
             color: var(--light-color);
 
@@ -352,6 +352,10 @@ $options: (
                 @include small-tablet {
                     gap: 5px;
                 }
+
+                @include mobile {
+                    width: 100%;
+                }
             }
         }
     }
@@ -362,6 +366,10 @@ $options: (
         @include small-tablet {
             min-width: auto;
             font-size: 10px;
+        }
+
+        @include mobile {
+            flex-basis: 55%;
         }
     }
 
@@ -376,6 +384,10 @@ $options: (
         @include small-tablet {
             min-width: auto;
             font-size: 10px;
+        }
+
+        @include mobile {
+            flex-basis: 45%;
         }
     }
 }

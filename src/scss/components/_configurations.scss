@@ -1,10 +1,23 @@
 .configurations {
+    &__container {
+        @include small-tablet {
+            padding-top: 60px;
+        }
+    }
 
     &__tabs-wrapper {
         position: sticky;
         top: 0;
         overflow: auto;
         z-index: 10;
+
+        @include tablet {
+            top: 20px;
+        }
+
+        @include small-tablet {
+            top: 50px;
+        }
     }
 
     &__tabs {
@@ -91,6 +104,7 @@
 
         @include tablet {
             border-bottom: none;
+            padding-top: 20px;
         }
 
         &.show {
@@ -103,6 +117,10 @@
 
         &:not(:last-child) {
             border-right: 1px dashed var(--botticelli-color);
+
+            @include tablet {
+                border-right: none;
+            }
         }
     }
 

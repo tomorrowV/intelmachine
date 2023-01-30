@@ -181,6 +181,10 @@ const systemTipTrigger = document.querySelectorAll(".tooltip-system__trigger");
 const systemTooltips = document.querySelectorAll(".tooltip-system__info");
 if (systemTipTrigger) {
     systemTipTrigger.forEach((trigger, index) => {
+        trigger.addEventListener("click", () => {
+            systemTooltips.forEach((s) => s.classList.remove("show"));
+            systemTooltips[index].classList.toggle("show");
+        });
         createPopper(trigger, systemTooltips[index], {
             placement: "top-end",
             modifiers: [
@@ -191,6 +195,13 @@ if (systemTipTrigger) {
                     },
                 },
             ],
+        });
+    });
+    systemTooltips.forEach((tip, index) => {
+        const closeTip = tip.querySelector(".tooltip-system__icon");
+        closeTip.addEventListener("click", (e) => {
+            e.stopImmediatePropagation();
+            tip.classList.remove("show");
         });
     });
 }

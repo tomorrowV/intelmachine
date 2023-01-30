@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+    @include('partials/preloader.html')
+    <div class="site-container">
+        @include('partials/header.html')
+        <main class="main offset">
+            <section class="not-found">
+                <div class="not-found__container container">
+                    <h1 class="not-found__title">404</h1>
+                    <p>Похоже страница
+                        не найдена, или что-то пошло не так</p>
+                    <a href="main.html" class="not-found__link btn">На главную</a>
+                </div>
+            </section>
+        </main>
+        @include('partials/footer.html')
+    </div>
+</body>
+
+</html>

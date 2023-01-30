@@ -34,12 +34,13 @@
         @include small-tablet {
             flex-wrap: wrap;
             font-size: 10px;
-            line-height: 16px;
+            line-height: 20px;
         }
 
         .private {
             @include small-tablet {
                 order: -2;
+                line-height: 20px;
             }
 
             max-width: 120px;
@@ -54,6 +55,12 @@
 
             @include small-tablet {
                 order: -1;
+
+                img,
+                svg {
+                    width: 20px;
+                    height: 20px;
+                }
             }
 
             &>div {

@@ -153,3 +153,40 @@ if (accordions) {
         });
     });
 }
+
+const equipmentSwitchers = document.querySelectorAll(".equipment__switcher");
+const equipmentContent = [
+    ...document.querySelectorAll(".equipment__card[data-content]"),
+];
+const equipmentGrid = document.querySelector(".equipment__grid");
+if (equipmentSwitchers && equipmentContent) {
+    let filteredContent = [];
+    const resetLayout = () => (equipmentGrid.innerHTML = "");
+    const generateLayout = (arr) =>
+        arr.forEach((el) =>
+            equipmentGrid.insertAdjacentElement("beforeend", el)
+        );
+
+    equipmentSwitchers.forEach((switcher) => {
+        switcher.addEventListener("click", () => {
+            const sAttr = switcher.dataset?.tab.toLowerCase();
+            if (switcher.classList.contains("active")) return;
+            if (sAttr === "все") {
+                filteredContent.length = 0;
+                resetLayout();
+                equipmentSwitchers.forEach((t) => removeClass(t, "active"));
+                addClass(switcher, "active");
+                generateLayout(equipmentContent);
+            } else {
+                filteredContent.length = 0;
+                resetLayout();
+                filteredContent = equipmentContent.filter(
+                    (content) => content.dataset.content.toLowerCase() === sAttr
+                );
+                equipmentSwitchers.forEach((p) => removeClass(p, "active"));
+                addClass(switcher, "active");
+                generateLayout(filteredContent);
+            }
+        });
+    });
+}

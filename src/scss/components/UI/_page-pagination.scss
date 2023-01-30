@@ -12,17 +12,25 @@
         background-color: var(--porclain-color);
         border-radius: 100%;
         @include flex-all-center;
-        font-size: 13px;
-        line-height: 22px;
-        @include EUSemiBold;
         cursor: pointer;
         transition: background-color .5s ease-in-out, color .5s ease-in-out;
+        position: relative;
+
+        span {
+            transform: translateY(1px);
+            font-size: 13px;
+            line-height: 0.5;
+            @include EUSemiBold;
+        }
 
         @include mobile {
             width: 30px;
             height: 30px;
-            font-size: 12px;
-            line-height: 22px;
+
+            span {
+                font-size: 12px;
+                line-height: 1;
+            }
         }
 
         &.present {
